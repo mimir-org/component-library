@@ -7,47 +7,47 @@ import { ColorReference } from "../../../props/colorReference";
 export const colorReference: ColorReference = {
   primary: {
     0: "#000000",
-    10: "#001b3c",
-    20: "#003366",
-    30: "#004689",
-    40: "#245fa6",
-    50: "#4378c1",
-    60: "#5f92dd",
-    70: "#7aadfa",
-    80: "#a7c8ff",
-    90: "#d5e3ff",
-    95: "#ecf1ff",
-    99: "#fdfbff",
+    10: "#272738", // Bastille
+    20: "#1D2635", // Midnight Express
+    30: "#3D113F", // Russian Violet
+    40: "#5455a9",
+    50: "#6d6ec4",
+    60: "#8788df",
+    70: "#a2a3fc",
+    80: "#c1c1ff",
+    90: "#e1dfff",
+    95: "#f2efff",
+    99: "#fffbff",
     100: "#ffffff",
   },
   secondary: {
     0: "#000000",
-    10: "#001f2e",
-    20: "#00364d",
-    30: "#004d6b",
-    40: "#00668f",
-    50: "#0080b3",
-    60: "#00aeef",
-    70: "#20b7f8",
-    80: "#82cfff",
-    90: "#c6e7ff",
-    95: "#e4f3ff",
-    99: "#fbfcff",
+    10: "#001c3a",
+    20: "#00315e",
+    30: "#004785",
+    40: "#1e5fa6",
+    50: "#3f78c0",
+    60: "#5b92dc",
+    70: "#77adf9",
+    80: "#a5c8ff",
+    90: "#D9E6FF", // Levander web hover
+    95: "#ebf1ff",
+    99: "#FDFBFF", // Levander web list
     100: "#ffffff",
   },
   tertiary: {
     0: "#000000",
-    10: "#311300",
-    20: "#502400",
-    30: "#723600",
-    40: "#964900",
-    50: "#bb5d00",
-    60: "#e1730a",
-    70: "#f58220",
-    80: "#ffb786",
-    90: "#ffdcc6",
-    95: "#ffede4",
-    99: "#fffbff",
+    10: "#001f24",
+    20: "#00363d",
+    30: "#004f58",
+    40: "#006874",
+    50: "#008391",
+    60: "#00a0b0",
+    70: "#22bccf",
+    80: "#4fd8eb",
+    90: "#97f0ff",
+    95: "#d0f8ff",
+    99: "#F2F2F2", // White Smoke
     100: "#ffffff",
   },
   success: {
@@ -97,32 +97,77 @@ export const colorReference: ColorReference = {
   },
   neutral: {
     0: "#000000",
-    10: "#001f25",
-    20: "#00363f",
-    30: "#004e5b",
-    40: "#006878",
-    50: "#008396",
-    60: "#009fb6",
-    70: "#29bbd5",
-    80: "#53d7f1",
-    90: "#a6eeff",
-    95: "#d6f6ff",
-    99: "#fdffff",
+    10: "#001b3d",
+    20: "#003062",
+    30: "#00468a",
+    40: "#265ea7",
+    50: "#4477c1",
+    60: "#6091dd",
+    70: "#7cacfa",
+    80: "#a8c8ff",
+    90: "#d6e3ff",
+    95: "#FAFAFA", // Cultured
+    99: "#FBFBFF", // Ghost White
     100: "#ffffff",
   },
   neutralVariant: {
     0: "#000000",
-    10: "#181c22",
-    20: "#333333",
-    30: "#43474e",
-    40: "#5b5e66",
-    50: "#808285",
-    60: "#8e9199",
-    70: "#a8abb4",
-    80: "#d1d3d4",
-    90: "#ededee",
-    95: "#eef0fa",
-    99: "#fdfbff",
+    10: "#272838", // Black Rock
+    20: "#4F4F4F", // Davys Grey
+    30: "#47464f",
+    40: "#6F6F6F", // Dim Grey
+    50: "#8C8C8C", // Battleship Grey
+    60: "#898787", // Grey
+    70: "#BCBCBC", // Silver
+    80: "#C4C4C4", // Light Silver
+    90: "#D4D4D4", // Light Gray
+    95: "#D9D9D9", // Gainsboro
+    99: "#fffbff",
+    100: "#ffffff",
+  },
+  functionAspect: {
+    0: "#000000",
+    10: "#1c1d00",
+    20: "#502400",
+    30: "#484a00",
+    40: "#606200",
+    50: "#797c06",
+    60: "#939627",
+    70: "#aeb140",
+    80: "#FBC913", // Sunglow
+    90: "#FFDE7A", // Jasmine
+    95: "#FEF445", // Lemon Yellow
+    99: "#FFFAA9", // Lemon Yellow Crayola
+    100: "#ffffff",
+  },
+  productAspect: {
+    0: "#000000",
+    10: "#002022",
+    20: "#00363a",
+    30: "#004f54",
+    40: "#006970",
+    50: "#00848d",
+    60: "#069098", // Viridian Green
+    70: "#00bdc9",
+    80: "#47DDE6", // Dark Turquoise
+    90: "#00F0FF", // Electric Blue
+    95: "#B9F5F9", // Celeste
+    99: "#f4feff",
+    100: "#ffffff",
+  },
+  locationAspect: {
+    0: "#000000",
+    10: "#0c0664",
+    20: "#252478",
+    30: "#A300A7", // Purple Munsell
+    40: "#5455a9",
+    50: "#6d6ec4",
+    60: "#FA00FF", // Magenta
+    70: "#F083F1", // Pink
+    80: "#c1c1ff",
+    90: "#FDCCFE", // Pink Lace
+    95: "#f2efff",
+    99: "#fffbff",
     100: "#ffffff",
   },
 };

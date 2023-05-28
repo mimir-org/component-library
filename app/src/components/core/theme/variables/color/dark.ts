@@ -8,65 +8,77 @@ export const dark: ColorSystem = {
     on: colorReference.neutralVariant[0],
   },
   primary: {
-    base: colorReference.primary[40],
-    on: colorReference.primary[99],
+    base: colorReference.primary[10],
+    on: colorReference.primary[100],
   },
   secondary: {
-    base: colorReference.secondary[80],
-    on: colorReference.secondary[20],
+    base: colorReference.secondary[0],
+    on: colorReference.secondary[90],
     container: {
-      base: colorReference.secondary[30],
-      on: colorReference.secondary[90],
+      base: colorReference.secondary[0],
+      on: colorReference.secondary[99],
     },
   },
   tertiary: {
-    base: colorReference.tertiary[80],
-    on: colorReference.tertiary[20],
+    base: colorReference.tertiary[0],
+    on: colorReference.tertiary[99],
     container: {
-      base: colorReference.tertiary[30],
-      on: colorReference.tertiary[90],
+      base: colorReference.neutralVariant[40],
+      on: colorReference.tertiary[100],
     },
   },
   success: {
-    base: colorReference.success[80],
-    on: colorReference.success[20],
+    base: colorReference.success[60],
+    on: colorReference.success[100],
   },
   error: {
-    base: colorReference.error[80],
-    on: colorReference.error[20],
+    base: colorReference.error[40],
+    on: colorReference.error[100],
   },
   warning: {
-    base: colorReference.warning[80],
-    on: colorReference.warning[10],
+    base: colorReference.warning[95],
+    on: colorReference.warning[0],
   },
   outline: {
-    base: colorReference.neutralVariant[40],
+    base: colorReference.neutralVariant[50],
   },
   background: {
     base: colorReference.neutralVariant[10],
-    on: colorReference.neutralVariant[90],
+    on: colorReference.neutralVariant[100],
     inverse: {
-      base: colorReference.neutralVariant[90],
+      base: colorReference.neutralVariant[100],
       on: colorReference.neutralVariant[10],
     },
   },
   surface: {
-    base: colorReference.neutral[0],
+    base: colorReference.neutral[10],
     on: colorReference.neutral[99],
     inverse: {
       base: colorReference.neutral[99],
-      on: colorReference.neutral[0],
+      on: colorReference.neutral[10],
     },
     variant: {
-      base: colorReference.neutralVariant[30],
-      on: colorReference.neutralVariant[80],
+      base: colorReference.neutral[0],
+      on: colorReference.neutralVariant[95],
     },
   },
   shadow: {
     base: colorReference.neutral[0],
   },
   pure: {
-    base: colorReference.neutral[0],
-    on: colorReference.neutral[100],
+    base: colorReference.neutral[100],
+    on: colorReference.neutral[0],
+  },
+  functionAspect: {
+    base: colorReference.functionAspect[95],
+    on: colorReference.functionAspect[0],
+  },
+  productAspect: {
+    base: colorReference.productAspect[90],
+    on: colorReference.productAspect[0],
+  },
+  locationAspect: {
+    base: colorReference.locationAspect[60],
+    on: colorReference.locationAspect[0],
   },
 };

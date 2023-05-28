@@ -20,4 +20,7 @@ export interface ColorSystem {
   };
   shadow: Pick<Accent, "base">;
   pure: Accent;
+  functionAspect: Accent;
+  productAspect: Accent;
+  locationAspect: Accent;
 }

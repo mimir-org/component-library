@@ -1,6 +1,6 @@
 {
   "name": "@mimirorg/component-library",
-  "version": "3.2.2",
+  "version": "0.0.1",
   "description": "React component library for Mimirorg",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -44,7 +44,7 @@
     "lint": "eslint . --max-warnings=0 --ext .ts,.tsx",
     "format": "prettier --write .",
     "predeploy": "npm run build-storybook",
-    "deploy-storybook": "gh-pages -d storybook-static"
+    "deploy-storybook": "npm run build-storybook && gh-pages -d storybook-static"
   },
   "peerDependencies": {
     "@fontsource/nunito-sans": "^4.5.10",

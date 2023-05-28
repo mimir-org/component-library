@@ -9,4 +9,7 @@ export interface ColorReference {
   warning: Palette;
   neutral: Palette;
   neutralVariant: Palette;
+  functionAspect: Palette;
+  productAspect: Palette;
+  locationAspect: Palette;
 }

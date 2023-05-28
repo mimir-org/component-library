@@ -4,31 +4,31 @@ import { colorReference } from "./reference/colorReference";
 export const light: ColorSystem = {
   reference: colorReference,
   text: {
-    base: colorReference.neutralVariant[10],
+    base: colorReference.neutralVariant[0],
     on: colorReference.neutralVariant[100],
   },
   primary: {
-    base: colorReference.primary[20],
+    base: colorReference.primary[10],
     on: colorReference.primary[100],
   },
   secondary: {
-    base: colorReference.secondary[60],
-    on: colorReference.secondary[100],
+    base: colorReference.secondary[90],
+    on: colorReference.secondary[0],
     container: {
-      base: colorReference.secondary[95],
-      on: colorReference.secondary[10],
+      base: colorReference.secondary[99],
+      on: colorReference.secondary[0],
     },
   },
   tertiary: {
-    base: colorReference.tertiary[70],
-    on: colorReference.tertiary[100],
+    base: colorReference.tertiary[99],
+    on: colorReference.tertiary[0],
     container: {
-      base: colorReference.tertiary[95],
-      on: colorReference.tertiary[10],
+      base: colorReference.neutralVariant[40],
+      on: colorReference.tertiary[100],
     },
   },
   success: {
-    base: colorReference.success[70],
+    base: colorReference.success[60],
     on: colorReference.success[100],
   },
   error: {
@@ -40,14 +40,14 @@ export const light: ColorSystem = {
     on: colorReference.warning[0],
   },
   outline: {
-    base: colorReference.neutralVariant[80],
+    base: colorReference.neutralVariant[50],
   },
   background: {
-    base: colorReference.neutralVariant[90],
-    on: colorReference.neutralVariant[10],
+    base: colorReference.neutralVariant[10],
+    on: colorReference.neutralVariant[100],
     inverse: {
-      base: colorReference.neutralVariant[10],
-      on: colorReference.neutralVariant[90],
+      base: colorReference.neutralVariant[100],
+      on: colorReference.neutralVariant[10],
     },
   },
   surface: {
@@ -58,8 +58,8 @@ export const light: ColorSystem = {
       on: colorReference.neutral[99],
     },
     variant: {
-      base: colorReference.neutralVariant[99],
-      on: colorReference.neutralVariant[20],
+      base: colorReference.neutral[95],
+      on: colorReference.neutralVariant[0],
     },
   },
   shadow: {
@@ -68,5 +68,17 @@ export const light: ColorSystem = {
   pure: {
     base: colorReference.neutral[100],
     on: colorReference.neutral[0],
+  },
+  functionAspect: {
+    base: colorReference.functionAspect[95],
+    on: colorReference.functionAspect[0],
+  },
+  productAspect: {
+    base: colorReference.productAspect[90],
+    on: colorReference.productAspect[0],
+  },
+  locationAspect: {
+    base: colorReference.locationAspect[60],
+    on: colorReference.locationAspect[0],
   },
 };
