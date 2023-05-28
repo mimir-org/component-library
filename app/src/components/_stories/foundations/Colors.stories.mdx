@@ -1,0 +1,148 @@
+import { ColorItem, ColorPalette, Meta } from "@storybook/addon-docs";
+import { dark, light } from "../../core/theme/variables";
+
+<Meta title="Foundations/Colors" />
+
+# Colors
+
+## Overview
+
+Mimir and Tyle uses several colors to help users identify statuses, actions, and navigate the application in general.
+Below you will find an overview of all the colors available in the design system, and that are consumable by the developers.
+
+### Concept
+
+As of 12.05.23 the color structure loosely follows material design 3's guidelines.
+Read more about the color roles and intention behind the different color roles at
+[Material Design 3 Color Roles](https://m3.material.io/styles/color/the-color-system/color-roles).
+
+#### Example
+
+Accent colors: Primary, secondary, and tertiary roles follow the pattern of a 4-color group.
+
+Let's take the secondary color as an example:
+
+- Secondary base color
+- On-secondary is applied to content (icons, text, etc.) that sits on top of secondary
+- Secondary container is applied to elements needing less emphasis than secondary
+- On-secondary container is applied to content (icons, text, etc.) that sits on top of primary secondary
+
+## Core scheme
+
+### Light theme
+
+<ColorPalette>
+  <ColorItem
+    title="Primary"
+    subtitle="Primary accent colors"
+    colors={{ base: light.primary.base, on: light.primary.on }}
+  />
+  <ColorItem
+    title="Secondary"
+    subtitle="Secondary accent colors"
+    colors={{
+      base: light.secondary.base,
+      on: light.secondary.on,
+      "container.base": light.secondary.container?.base,
+      "container.on": light.secondary.container?.on,
+    }}
+  />
+  <ColorItem
+    title="Tertiary"
+    subtitle="Tertiary accent colors"
+    colors={{
+      base: light.tertiary.base,
+      on: light.tertiary.on,
+      "container.base": light.tertiary.container?.base,
+      "container.on": light.tertiary.container?.on,
+    }}
+  />
+  <ColorItem title="Success" subtitle="Semantic error colors" colors={light.success} />
+  <ColorItem title="Error" subtitle="Semantic error colors" colors={light.error} />
+  <ColorItem
+    title="Background"
+    subtitle="Colors for backgrounds or high emphasis text and icons"
+    colors={{
+      base: light.background.base,
+      on: light.background.on,
+      "inverse.base": light.background.inverse.base,
+      "inverse.on": light.background.inverse.on,
+    }}
+  />
+  <ColorItem
+    title="Surface"
+    subtitle="Colors for surfaces or high emphasis text and icons"
+    colors={{
+      base: light.surface.base,
+      on: light.surface.on,
+      "inverse.base": light.surface.inverse.base,
+      "inverse.on": light.surface.inverse.on,
+    }}
+  />
+  <ColorItem
+    title="Surface variant"
+    subtitle="Colors for surfaces or medium emphasis text and icons"
+    colors={light.surface.variant}
+  />
+  <ColorItem title="Outline" subtitle="Color for component outlines" colors={light.outline} />
+  <ColorItem title="Text" subtitle="Text accent colors" colors={{ base: light.text.base, on: light.text.on }} />
+</ColorPalette>
+
+### Dark theme
+
+<ColorPalette>
+  <ColorItem
+    title="Primary"
+    subtitle="Primary accent colors"
+    colors={{ base: dark.primary.base, on: dark.primary.on }}
+  />
+  <ColorItem
+    title="Secondary"
+    subtitle="Secondary accent colors"
+    colors={{
+      base: dark.secondary.base,
+      on: dark.secondary.on,
+      "container.base": dark.secondary.container?.base,
+      "container.on": dark.secondary.container?.on,
+    }}
+  />
+  <ColorItem
+    title="Tertiary"
+    subtitle="Tertiary accent colors"
+    colors={{
+      base: dark.tertiary.base,
+      on: dark.tertiary.on,
+      "container.base": dark.tertiary.container?.base,
+      "container.on": dark.tertiary.container?.on,
+    }}
+  />
+  <ColorItem title="Success" subtitle="Semantic error colors" colors={dark.success} />
+  <ColorItem title="Error" subtitle="Semantic error colors" colors={dark.error} />
+  <ColorItem
+    title="Background"
+    subtitle="Colors for backgrounds or high emphasis text and icons"
+    colors={{
+      base: dark.background.base,
+      on: dark.background.on,
+      "inverse.base": dark.background.inverse.base,
+      "inverse.on": dark.background.inverse.on,
+    }}
+  />
+  <ColorItem
+    title="Surface"
+    subtitle="Colors for surfaces or high emphasis text and icons"
+    colors={{
+      base: dark.surface.base,
+      on: dark.surface.on,
+      "inverse.base": dark.surface.inverse.base,
+      "inverse.on": dark.surface.inverse.on,
+    }}
+  />
+  <ColorItem
+    title="Surface variant"
+    subtitle="Colors for surfaces or medium emphasis text and icons"
+    colors={dark.surface.variant}
+  />
+  <ColorItem title="Outline" subtitle="Color for component outlines" colors={dark.outline} />
+  <ColorItem title="Text" subtitle="Text accent colors" colors={{ base: dark.text.base, on: dark.text.on }} />
+</ColorPalette>

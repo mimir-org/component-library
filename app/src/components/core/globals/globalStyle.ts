@@ -1,0 +1,63 @@
+import { createGlobalStyle } from "styled-components";
+import { getTextRole } from "../theme/helpers";
+import { globalResetStyle } from "./globalResetStyle";
+
+export const GlobalStyle = createGlobalStyle`
+  ${globalResetStyle};
+
+  body {
+    background: ${({ theme }) => theme.mimir.color.background.base};
+  }
+
+  // Global typography styles
+  body {
+    font-family: ${({ theme }) => theme.mimir.typography.typeface.brand};
+    font-weight: ${({ theme }) => theme.mimir.typography.typeface.weights.normal};
+    font-size: 100%;
+    color: ${({ theme }) => theme.mimir.color.text.base};
+  }
+
+  h1 {
+    ${getTextRole("display-large")};
+  }
+
+  h2 {
+    ${getTextRole("display-medium")};
+  }
+
+  h3 {
+    ${getTextRole("display-small")};
+  }
+
+  h4 {
+    ${getTextRole("headline-large")};
+  }
+
+  h5 {
+    ${getTextRole("headline-medium")};
+  }
+
+  h6 {
+    ${getTextRole("headline-small")};
+  }
+
+  p,
+  a {
+    ${getTextRole("body-large")};
+  }
+
+  a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  b,
+  strong {
+    ${getTextRole("body-large")};
+    font-weight: ${({ theme }) => theme.mimir.typography.typeface.weights.bold};
+  }
+
+  small {
+    ${getTextRole("body-small")};
+  }
+`;

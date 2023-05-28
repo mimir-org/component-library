@@ -1,0 +1,40 @@
+import { Meta } from "@storybook/addon-docs";
+import { theme } from "../../core/theme/variables";
+import { Box } from "../../layouts";
+import { Text } from "../../atoms";
+
+<Meta title="Foundations/Shadows" />
+
+# Shadows
+
+## Overview
+
+Here you will find an overview of the different shadows available. These are used to create a sense of hierarchy and elevation within the UI and different layouts.
+
+## Shadow levels
+
+<Box
+  display="flex"
+  flexDirection={"column"}
+  justifyContent={"space-between"}
+  gap={theme.spacing.multiple(8)}
+  spacing={{ p: theme.spacing.multiple(5) }}
+  border={`2px solid ${theme.color.outline.base}`}
+  borderRadius={theme.border.radius.medium}
+>
+  {Object.entries(theme.shadow).map(([k, v]) => {
+    return (
+      <Box
+        key={v}
+        display="flex"
+        flexDirection={"column"}
+        gap={theme.spacing.xxl}
+        spacing={{ p: theme.spacing.l }}
+        boxShadow={v}
+      >
+        <Text variant={"title-medium"}>shadow.{k}</Text>
+        <Text variant={"label-large"}>box-shadow: {v}</Text>
+      </Box>
+    );
+  })}
+</Box>

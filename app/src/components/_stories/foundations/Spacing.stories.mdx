@@ -1,0 +1,33 @@
+import { Meta } from "@storybook/addon-docs";
+import { getSpacingsOnly, theme } from "../../core/theme/variables";
+import { Box, Flexbox } from "../../layouts";
+import { Text } from "../../atoms";
+
+<Meta title="Foundations/Spacing" />
+
+# Spacing
+
+## Overview
+
+Below you will find an overview of all the spacing primitives available, each step increasing in relation to the one that came before it.
+The spacing is calculated from the base font size (1rem), which means that altering the base font size will scale the spacing accordingly.
+
+## Spacing sizes
+
+<Box
+  display="flex"
+  gap={theme.spacing.xxxl}
+  spacing={{ p: theme.spacing.multiple(5) }}
+  border={`2px solid ${theme.color.outline.base}`}
+  borderRadius={theme.border.radius.medium}
+>
+  {Object.entries(getSpacingsOnly()).map(([k, v]) => {
+    return (
+      <Flexbox key={v} flexDirection="column">
+        <Box height={"40px"} width={v} bgColor={theme.color.text.base} />
+        <Text variant={"title-medium"}>{k}</Text>
+        <Text variant={"label-large"}>{v}</Text>
+      </Flexbox>
+    );
+  })}
+</Box>

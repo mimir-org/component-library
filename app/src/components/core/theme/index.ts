@@ -1,0 +1,1 @@
+export { MimirorgThemeProvider } from "./MimirorgThemeProvider";

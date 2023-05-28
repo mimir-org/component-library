@@ -1,0 +1,35 @@
+import { Meta } from "@storybook/addon-docs";
+import { theme } from "../../core/theme/variables";
+import { Box, Flexbox } from "../../layouts";
+import { Text } from "../../atoms";
+
+<Meta title="Foundations/Rounding" />
+
+# Rounding
+
+## Overview
+
+Here you will find an overview of the different units available for rounding of element corners.
+
+## Rounding levels
+
+<Box
+  display="flex"
+  justifyContent={"space-between"}
+  gap={theme.spacing.xl}
+  spacing={{ p: theme.spacing.xl }}
+  border={`2px solid ${theme.color.outline.base}`}
+  borderRadius={theme.border.radius.medium}
+>
+  {Object.entries(theme.border.radius).map(([k, v]) => {
+    return (
+      <Flexbox key={v} flexDirection={"column"} gap={theme.spacing.xl}>
+        <Box borderRadius={v} border="2px solid black" width="100px" height="100px" p={theme.spacing.s} />
+        <Flexbox flexDirection="column" gap={theme.spacing.s}>
+          <Text variant={"title-medium"}>radius.{k}</Text>
+          <Text variant={"label-large"}>{v}</Text>
+        </Flexbox>
+      </Flexbox>
+    );
+  })}
+</Box>
