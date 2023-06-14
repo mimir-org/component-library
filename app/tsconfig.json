@@ -19,17 +19,8 @@
     "strict": true,
     "skipLibCheck": true,
     "noUnusedLocals": true,
-    "noFallthroughCasesInSwitch": true,
+    "noFallthroughCasesInSwitch": true
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/global.d.ts", "src/theme.d.ts"],
-  "exclude": [
-    "dist",
-    "node_modules",
-    "__test__",
-    "src/**/*.test.tsx",
-    "src/**/*.test.ts",
-    "src/**/*.stories.tsx",
-    "src/**/*.stories.ts",
-    "frontend"
-  ]
+  "exclude": ["dist", "node_modules", "__test__", "src/**/*.test.tsx", "src/**/*.test.ts", "frontend"]
 }
