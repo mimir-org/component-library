@@ -5,7 +5,7 @@
  *
  * @param key  the storage key
  */
-export function readValue<T>(key: string): T {
+export function lsReadValue<T>(key: string): T {
   if (typeof window === "undefined") return null as T;
 
   try {
@@ -27,7 +27,7 @@ export function readValue<T>(key: string): T {
  * @param key   the storage key
  * @param value the value that will be saved
  */
-export function saveValue<T>(key: string, value: T): void {
+export function lsSaveValue<T>(key: string, value: T): void {
   if (typeof window === "undefined") return;
   try {
     if (value == null) {

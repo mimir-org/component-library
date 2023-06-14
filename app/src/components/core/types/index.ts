@@ -1,3 +1,3 @@
-export { ApplicationSetting } from "./applicationSetting";
-export { Language } from "./language";
-export { LanguageSetting } from "./languageSetting";
+export type { ApplicationSetting } from "./applicationSetting";
+export type { Language } from "./language";
+export type { LanguageSetting } from "./languageSetting";

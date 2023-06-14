@@ -1,5 +1,6 @@
 import { ColorItem, ColorPalette, Meta } from "@storybook/addon-docs";
-import { dark, light } from "../../core/theme/variables";
+import { light } from "../../core/theme/variables/color/light";
+import { dark } from "../../core/theme/variables/color/dark";
 
 <Meta title="Foundations/Colors" />
 
@@ -7,7 +8,7 @@ import { dark, light } from "../../core/theme/variables";
 
 ## Overview
 
-Mimir and Tyle uses several colors to help users identify statuses, actions, and navigate the application in general.
+Mimirorg uses several colors to help users identify statuses, actions, and navigate the application in general.
 Below you will find an overview of all the colors available in the design system, and that are consumable by the developers.
 
 ### Concept
@@ -89,7 +90,6 @@ Let's take the secondary color as an example:
   <ColorItem title="Function Aspect" subtitle="Colors for function aspect items" colors={light.functionAspect} />
   <ColorItem title="Product Aspect" subtitle="Colors for product aspect items" colors={light.productAspect} />
   <ColorItem title="Location Aspect" subtitle="Colors for location aspect items" colors={light.locationAspect} />
-
 </ColorPalette>
 
 ### Dark theme
@@ -149,7 +149,7 @@ Let's take the secondary color as an example:
   />
   <ColorItem title="Outline" subtitle="Color for component outlines" colors={dark.outline} />
   <ColorItem title="Text" subtitle="Text accent colors" colors={{ base: dark.text.base, on: dark.text.on }} />
-  <ColorItem title="Function Aspect" subtitle="Colors for function aspect items" colors={light.functionAspect} />
-  <ColorItem title="Product Aspect" subtitle="Colors for product aspect items" colors={light.productAspect} />
-  <ColorItem title="Location Aspect" subtitle="Colors for location aspect items" colors={light.locationAspect} />
+  <ColorItem title="Function Aspect" subtitle="Colors for function aspect items" colors={dark.functionAspect} />
+  <ColorItem title="Product Aspect" subtitle="Colors for product aspect items" colors={dark.productAspect} />
+  <ColorItem title="Location Aspect" subtitle="Colors for location aspect items" colors={dark.locationAspect} />
 </ColorPalette>

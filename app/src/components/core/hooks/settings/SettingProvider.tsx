@@ -1,7 +1,8 @@
-import { ApplicationSetting } from "../types";
-import { createContext, Dispatch, ReactNode, SetStateAction, useContext, useEffect, useMemo, useState } from "react";
+import { ReactNode, useEffect, useMemo, useState } from "react";
+import { ApplicationSetting } from "../../types";
+import { ApplicationContext } from "./ApplicationContext";
 
-export const defaultAppSetting: ApplicationSetting = {
+const defaultAppSetting: ApplicationSetting = {
   language: {
     current: "en",
     languages: [
@@ -11,16 +12,9 @@ export const defaultAppSetting: ApplicationSetting = {
   },
 };
 
-export interface SettingProviderProps {
+interface SettingProviderProps {
   children?: ReactNode;
 }
-
-export interface IApplicationContext {
-  setting: ApplicationSetting;
-  setSetting: Dispatch<SetStateAction<ApplicationSetting>>;
-}
-
-export const ApplicationContext = createContext<IApplicationContext>({} as IApplicationContext);
 
 export const SettingProvider = ({ children }: SettingProviderProps) => {
   const [setting, setSetting] = useState<ApplicationSetting>(() => {
@@ -44,8 +38,4 @@ export const SettingProvider = ({ children }: SettingProviderProps) => {
   const settingProviderValue = useMemo(() => ({ setting, setSetting }), [setting, setSetting]);
 
   return <ApplicationContext.Provider value={settingProviderValue}>{children}</ApplicationContext.Provider>;
-};
-
-export const useSetting = () => {
-  return useContext(ApplicationContext);
 };

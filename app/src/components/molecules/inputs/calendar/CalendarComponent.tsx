@@ -11,7 +11,7 @@ import {
 } from "./CalendarComponent.styled";
 import { CalendarContent } from "./components/CalendarContent";
 
-export type CalendarComponentProps = CalendarComponentContainerProps & {
+interface CalendarComponentProps extends CalendarComponentContainerProps {
   icon?: ReactElement;
   onChange?: (item: Date | undefined) => void;
   value?: Date | string | null;
@@ -21,7 +21,7 @@ export type CalendarComponentProps = CalendarComponentContainerProps & {
   inputHidden?: boolean;
   iconSize?: number;
   buttonHeight?: string;
-};
+}
 
 /**
  * Component that displays a calendar button, field and calendar popover.

@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Library } from "../../assets";
 import { Icon } from "./Icon";
+import { LibraryIcon } from "../../icons";
 
 const meta: Meta<typeof Icon> = {
   title: "Atoms/Icon",
@@ -9,7 +9,7 @@ const meta: Meta<typeof Icon> = {
 
 export const Default: StoryObj<typeof Icon> = {
   args: {
-    src: Library,
+    src: <LibraryIcon />,
     size: 16,
   },
 };

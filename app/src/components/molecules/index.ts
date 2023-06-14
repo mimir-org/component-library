@@ -1,6 +1,6 @@
 export type { CalendarVariant } from "./inputs/calendar/CalendarComponent.styled";
-export type { FileInfo } from "./file/FileComponent";
 export type { SelectVariant } from "./inputs/select/Select";
+export type { FileInfo } from "./file/types/fileInfo";
 
 export { Dialog } from "./dialog/Dialog";
 export { DialogDescription } from "./dialog/components/DialogDescription";
@@ -8,10 +8,6 @@ export { DialogExit } from "./dialog/components/DialogExit";
 export { DialogTitle } from "./dialog/components/DialogTitle";
 
 export { FileComponent } from "./file/FileComponent";
-export { FileComponentContainer } from "./file/FileComponent.styled";
-export { FileInputContainer } from "./file/components/FileInput.styled";
-export { FileItemComponent } from "./file/components/FileItemComponent";
-export { FileItemContainer } from "./file/components/FileItemComponent.styled";
 
 export { Form } from "./form/Form";
 export { FormErrorBanner } from "./form/FormErrorBanner";

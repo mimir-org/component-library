@@ -1,9 +1,8 @@
 import { Meta, StoryObj } from "@storybook/react";
-import React from "react";
-import { Button, Text } from "../../atoms";
-import { MotionBox } from "../../layouts";
 import { Toaster } from "./Toaster";
+import { Button, Text } from "../../atoms";
 import { toast } from "./toast";
+import { MotionBox } from "../../layouts";
 
 const meta: Meta<typeof Toaster> = {
   title: "Molecules/Toaster",

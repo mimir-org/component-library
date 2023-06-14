@@ -6,42 +6,45 @@ module.exports = {
   },
   extends: [
     "eslint:recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
     "plugin:react-hooks/recommended",
+    "plugin:jsx-a11y/recommended",
     "plugin:import/recommended",
     "plugin:import/typescript",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
     "plugin:storybook/recommended",
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
+    ecmaVersion: 2021,
+    sourceType: "module",
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: 12,
-    sourceType: "module",
   },
-  plugins: ["react", "@typescript-eslint"],
+  plugins: ["react", "react-refresh", "@typescript-eslint"],
   rules: {
-    "sort-imports": [
-      "error",
-      {
-        ignoreCase: false,
-        ignoreDeclarationSort: true,
-        ignoreMemberSort: true,
-        memberSyntaxSortOrder: ["none", "single", "all", "multiple"],
-        allowSeparatedGroups: false,
-      },
-    ],
+    // Only export component from files that have them (HMR support)
+    "react-refresh/only-export-components": "warn",
+    // Allow implicit return types
     "@typescript-eslint/explicit-module-boundary-types": "off",
+    // No unused variables except for the format "_someVariable"
     "@typescript-eslint/no-unused-vars": [
       "warn",
       {
         argsIgnorePattern: "^_",
         varsIgnorePattern: "^_",
         caughtErrorsIgnorePattern: "^_",
+      },
+    ],
+    "sort-imports": [
+      "error",
+      {
+        ignoreDeclarationSort: true,
+        ignoreMemberSort: true,
+        memberSyntaxSortOrder: ["none", "single", "all", "multiple"],
       },
     ],
   },
@@ -53,7 +56,7 @@ module.exports = {
     "import/resolver": {
       node: {
         paths: ["src"],
-        extensions: ["d.ts", ".ts", ".tsx", ".js", ".jsx", ".svg"],
+        extensions: ["d.ts", ".ts", ".tsx", ".js", ".jsx"],
       },
     },
   },

@@ -10,7 +10,7 @@ export type CalendarVariant = "standard" | "compact";
 export type CalendarComponentContainerProps = Flex &
   Sizing &
   Spacings &
-  HTMLAttributes<HTMLDivElement> & {
+  Omit<HTMLAttributes<HTMLDivElement>, "onChange"> & {
     variant?: CalendarVariant;
   };
 

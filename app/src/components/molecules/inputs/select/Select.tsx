@@ -8,6 +8,12 @@ import { getStandardSelectStyle } from "./variants/standardSelect";
 
 export type SelectVariant = "standard" | "compact";
 
+interface SelectProps<Option, IsMulti extends boolean = false, Group extends GroupBase<Option> = GroupBase<Option>>
+  extends Props<Option, IsMulti, Group> {
+  variant?: SelectVariant;
+  selectRef?: Ref<ReactSelectType<Option, IsMulti, Group>>;
+}
+
 /**
  * Select component built on top of react-select. Offers a generic api to allow for using almost any data-structure as options.
  *
@@ -15,19 +21,13 @@ export type SelectVariant = "standard" | "compact";
  * @see https://react-select.com
  * @see https://react-select.com/typescript#select-generics
  *
- * @param variant
- * @param selectRef reference forwarded to underlying react-select component
- * @param reactSelectProps all built-in react-select properties
  * @constructor
+ * @param props takes all react-select props in addition to variant (styling) and selectRef (reference by prop)
  */
-export const Select = <Option, IsMulti extends boolean = false, Group extends GroupBase<Option> = GroupBase<Option>>({
-  variant,
-  selectRef,
-  ...reactSelectProps
-}: Props<Option, IsMulti, Group> & {
-  variant?: SelectVariant;
-  selectRef?: Ref<ReactSelectType<Option, IsMulti, Group>>;
-}) => {
+export const Select = <Option, IsMulti extends boolean = false, Group extends GroupBase<Option> = GroupBase<Option>>(
+  props: SelectProps<Option, IsMulti, Group>
+) => {
+  const { variant, selectRef, ...reactSelectProps } = props;
   const theme = useTheme();
   const customStyles = getSelectStyle<Option, IsMulti, Group>(theme.mimir, variant);
 

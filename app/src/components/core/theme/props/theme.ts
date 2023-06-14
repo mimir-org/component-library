@@ -16,5 +16,4 @@ export interface Theme {
   state: StateSystem;
   animation: AnimationSystem;
   queries: QuerySystem;
-  systemColors: Map<string, string>;
 }

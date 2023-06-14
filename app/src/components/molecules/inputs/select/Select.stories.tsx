@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Library } from "../../../assets";
-import { Icon, Text } from "../../../atoms";
+import { LibraryIcon } from "../../../icons";
+import { Text } from "../../../atoms";
 import { Flexbox } from "../../../layouts";
 import { Select } from "./Select";
 
@@ -43,7 +43,7 @@ export const WithComponentOptions: Story = {
       isMulti
       formatOptionLabel={(x) => (
         <Flexbox alignItems={"center"} gap={"8px"}>
-          <Icon src={Library} />
+          <LibraryIcon />
           <Text>{x.label}</Text>
         </Flexbox>
       )}

@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { Input } from "./Input";
-import { Library } from "../../../assets";
+import { LibraryIcon } from "../../../icons";
 
 const meta: Meta<typeof Input> = {
   title: "Molecules/Input",
@@ -38,7 +38,7 @@ export const WithIcon: Story = {
     defaultValue: "Some input",
     placeholder: "placeholder",
     type: "text",
-    icon: Library,
+    icon: <LibraryIcon />,
     iconPlacement: "left",
   },
 };

@@ -30,38 +30,34 @@ type Props = TooltipContentProps & {
  * @param delegated receives sizing props for overriding default styles
  * @constructor
  */
-export const Tooltip = forwardRef(
-  (
-    { children, content, placement, align, delay, offset, asChild, ...delegated }: PropsWithChildren<Props>,
-    ref: ForwardedRef<HTMLDivElement>
-  ) => {
-    const theme = useTheme();
-    const containsTextOnly = typeof content === "string";
+export const Tooltip = forwardRef((props: PropsWithChildren<Props>, ref: ForwardedRef<HTMLDivElement>) => {
+  const { children, content, placement, align, delay, offset, asChild, ...delegated } = props;
+  const theme = useTheme();
+  const containsTextOnly = typeof content === "string";
 
-    return (
-      <div ref={ref}>
-        <TooltipPrimitive.Root disableHoverableContent delayDuration={delay}>
-          <TooltipPrimitive.Trigger asChild={asChild}>{children}</TooltipPrimitive.Trigger>
-          <AnimatePresence>
-            <TooltipPrimitive.Portal>
-              <TooltipPrimitive.Content
-                asChild={asChild}
-                avoidCollisions
-                sideOffset={offset}
-                side={placement}
-                align={align}
-              >
-                <MotionTooltipContent {...theme.mimir.animation.scale} {...delegated}>
-                  {containsTextOnly ? <Text variant={"body-medium"}>{content}</Text> : content}
-                </MotionTooltipContent>
-              </TooltipPrimitive.Content>
-            </TooltipPrimitive.Portal>
-          </AnimatePresence>
-        </TooltipPrimitive.Root>
-      </div>
-    );
-  }
-);
+  return (
+    <div ref={ref}>
+      <TooltipPrimitive.Root disableHoverableContent delayDuration={delay}>
+        <TooltipPrimitive.Trigger asChild={asChild}>{children}</TooltipPrimitive.Trigger>
+        <AnimatePresence>
+          <TooltipPrimitive.Portal>
+            <TooltipPrimitive.Content
+              asChild={asChild}
+              avoidCollisions
+              sideOffset={offset}
+              side={placement}
+              align={align}
+            >
+              <MotionTooltipContent {...theme.mimir.animation.scale} {...delegated}>
+                {containsTextOnly ? <Text variant={"body-medium"}>{content}</Text> : content}
+              </MotionTooltipContent>
+            </TooltipPrimitive.Content>
+          </TooltipPrimitive.Portal>
+        </AnimatePresence>
+      </TooltipPrimitive.Root>
+    </div>
+  );
+});
 
 Tooltip.displayName = "Tooltip";
 Tooltip.defaultProps = {

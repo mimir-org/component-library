@@ -14,7 +14,11 @@ export const CalendarContent = forwardRef((props: CalendarContentProps, ref: For
       <Calendar
         locale={"no"}
         inputRef={ref}
-        onChange={(value) => onItemChange(value ?? undefined)}
+        onChange={(value) => {
+          if (value instanceof Date) {
+            onItemChange(value ?? undefined);
+          }
+        }}
         value={value ?? undefined}
       />
     </CalendarContentContainer>

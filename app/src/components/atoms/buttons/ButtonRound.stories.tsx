@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { CalendarMonth } from "@styled-icons/material-outlined";
-import { Library } from "../../assets";
 import { Button } from "./Button";
+import { LibraryIcon } from "../../icons";
 
 const meta: Meta<typeof Button> = {
   title: "Atoms/Buttons/Round",
@@ -26,7 +26,7 @@ export const Disabled: Story = {
 
 export const WithIconOnly: Story = {
   args: {
-    icon: Library,
+    icon: <LibraryIcon />,
     iconOnly: true,
   },
 };
@@ -41,14 +41,14 @@ export const WithSmallIconOnly: Story = {
 
 export const WithIconLeftAndText: Story = {
   args: {
-    icon: Library,
+    icon: <LibraryIcon />,
     iconPlacement: "left",
   },
 };
 
 export const WithIconRightAndText: Story = {
   args: {
-    icon: Library,
+    icon: <LibraryIcon />,
     iconPlacement: "right",
   },
 };

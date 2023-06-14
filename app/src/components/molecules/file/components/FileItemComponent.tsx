@@ -1,13 +1,13 @@
 import { Clear, Description } from "@styled-icons/material-outlined";
 import { Text, Tooltip } from "../../../atoms";
 import { Textarea } from "../../inputs/textarea/Textarea";
-import { FileInfo } from "../FileComponent";
+import { FileInfo } from "../types/fileInfo";
 import {
   FileIconContainer,
   FileInfoContainer,
   FileItemContainer,
-  FileTextareaContainer,
   FileTextContainer,
+  FileTextareaContainer,
 } from "./FileItemComponent.styled";
 
 interface Props {
@@ -57,7 +57,7 @@ export const FileItemComponent = ({
               </Tooltip>
             </FileIconContainer>
             <FileTextContainer>
-              <Text as="h4" useEllipsis>
+              <Text as="p" useEllipsis>
                 {fileInfo.fileName}
               </Text>
               <Text variant="label-medium">{fileInfo.fileSize} byte</Text>

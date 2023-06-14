@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { FileComponent, FileInfo } from "./FileComponent";
+import { FileComponent } from "./FileComponent";
+import { FileInfo } from "./types/fileInfo";
 
 const files = [] as FileInfo[];
 const onFileChange = (files: FileInfo[]) => {

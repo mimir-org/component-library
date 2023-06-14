@@ -1,30 +1,27 @@
 {
   "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
-    "declaration": true,
-    "esModuleInterop": true,
-    "jsx": "react-jsx",
-    "lib": ["ES5", "ES2015", "ES2016", "DOM", "ESNext"],
-    "types": ["node"],
-    "module": "es2015",
-    "moduleResolution": "node",
-    "noImplicitAny": false,
-    "noUnusedLocals": true,
-    "outDir": "dist/esm",
-    "sourceMap": false,
-    "strict": true,
-    "target": "ES6",
-    "plugins": [{ "name": "typescript-plugin-css-modules" }],
     "baseUrl": ".",
-    "paths": {
-      "@/src/*": ["src/*"],
-      "@/components/*": ["src/components/*"],
-      "@/shared/*": ["src/shared/*"],
-      "@/icons/*": ["src/icons/*"],
-      "@/types/*": ["src/types/*"]
-    }
+    "target": "ES6",
+    "lib": ["ES5", "ES2015", "ES2016", "DOM", "ESNext"],
+    "module": "ES6",
+
+    "moduleResolution": "bundler",
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "declaration": true,
+    "sourceMap": true,
+    "noEmit": true,
+
+    "allowJs": false,
+    "strict": true,
+    "skipLibCheck": true,
+    "noUnusedLocals": true,
+    "noFallthroughCasesInSwitch": true,
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.svg", "src/global.d.ts"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/global.d.ts", "src/theme.d.ts"],
   "exclude": [
     "dist",
     "node_modules",

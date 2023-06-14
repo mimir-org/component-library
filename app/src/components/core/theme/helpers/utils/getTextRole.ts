@@ -1,6 +1,6 @@
 import { TextTypes } from "../../../props";
 import { NominalScale, TypographyRoles } from "../../props";
-import { theme } from "../../variables";
+import { theme } from "../../variables/theme";
 import { css } from "styled-components";
 
 export const getTextRole = (variant?: TextTypes) => {
