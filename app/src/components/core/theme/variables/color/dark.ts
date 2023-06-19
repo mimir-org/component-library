@@ -44,9 +44,9 @@ export const dark: ColorSystem = {
   },
   background: {
     base: colorReference.neutralVariant[10],
-    on: colorReference.neutralVariant[90],
+    on: colorReference.neutralVariant[100],
     inverse: {
-      base: colorReference.neutralVariant[90],
+      base: colorReference.neutralVariant[100],
       on: colorReference.neutralVariant[10],
     },
   },

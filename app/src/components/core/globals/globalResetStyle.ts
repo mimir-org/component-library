@@ -17,6 +17,7 @@ export const globalResetStyle = css`
   html,
   body {
     height: 100%;
+    margin: 0;
   }
 
   body {
@@ -29,7 +30,6 @@ export const globalResetStyle = css`
   video,
   canvas,
   svg {
-    display: block;
     max-width: 100%;
   }
 
@@ -53,5 +53,7 @@ export const globalResetStyle = css`
   #root {
     isolation: isolate;
     height: 100%;
+    display: flex;
+    flex-direction: column;
   }
 `;

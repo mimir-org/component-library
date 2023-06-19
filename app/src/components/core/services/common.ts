@@ -1,4 +1,19 @@
 /**
+ * Function to ignore circular references
+ */
+export const ignoreCircularReferences = () => {
+  const seen = new WeakSet();
+  return (key: string, value: object) => {
+    if (key.startsWith("_")) return;
+    if (typeof value === "object" && value !== null) {
+      if (seen.has(value)) return;
+      seen.add(value);
+    }
+    return value;
+  };
+};
+
+/**
  * Create a unique GUID id
  */
 export const createId = (): string => {

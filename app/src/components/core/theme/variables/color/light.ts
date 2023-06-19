@@ -43,11 +43,11 @@ export const light: ColorSystem = {
     base: colorReference.neutralVariant[80],
   },
   background: {
-    base: colorReference.neutralVariant[90],
+    base: colorReference.neutralVariant[100],
     on: colorReference.neutralVariant[10],
     inverse: {
       base: colorReference.neutralVariant[10],
-      on: colorReference.neutralVariant[90],
+      on: colorReference.neutralVariant[100],
     },
   },
   surface: {
