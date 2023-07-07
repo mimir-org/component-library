@@ -33,6 +33,38 @@ export const createId = (): string => {
 };
 
 /**
+ * Create a unique GUID id
+ * @param domain The domain included in id ex. example.com_xxxxx-xxxxx-xxxxx
+ */
+export const createDomainId = (domain: string): string => {
+  const id = createId();
+  if (domain == null) return id;
+  return domain + "_" + id;
+};
+
+/**
+ * Get domain from id
+ * @param id The id formatted as example.com_xxxxx-xxxxx-xxxxx
+ */
+export const getDomainFromId = (id: string): string => {
+  if (id == null) throw Error("Can't find a domian from null or undefined string.");
+
+  const split = id.split("_");
+  if (split.length !== 2) throw Error("Can't find a domian. An id should be like example.com_xxxxx-xxxxx-xxxxx.");
+
+  return split[0].trim();
+};
+
+/**
+ *
+ * @param value The value that should replace trailing slashes
+ * @returns The replaced string without trailing slashes
+ */
+export const removeTrailingSlashes = (value: string): string => {
+  return value.replace(/\/+$/, "");
+};
+
+/**
  * Create a unique number id based on unique string
  * @param negative
  */
