@@ -7,6 +7,16 @@ export {
   ProductIcon,
 } from "./aspect/AspectIcon";
 export { CheckmarkCheckedIcon, CheckmarkEmptyIcon, CheckmarkIcon } from "./checkmark/CheckmarkIcon";
+export {
+  ConnectorBidirectionalIcon,
+  ConnectorDownstreamIcon,
+  ConnectorIcon,
+  ConnectorLocationIcon,
+  ConnectorProductIcon,
+  ConnectorTreeviewIcon,
+  ConnectorUpstreamIcon,
+  ConnectorVerticalIcon,
+} from "./connector/ConnectorIcon";
 export { DeleteActiveIcon, DeleteDisabledIcon, DeleteIcon } from "./delete/DeleteIcon";
 export {
   AvatarBackgroundIcon,

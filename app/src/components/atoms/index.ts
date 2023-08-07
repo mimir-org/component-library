@@ -1,8 +1,11 @@
 export { Button } from "./buttons/Button";
 export { ConditionalWrapper } from "./conditional/ConditionalWrapper";
 export { Divider } from "./divider/Divider";
+export { FlowConnectorComponent } from "./flow/connectors/FlowConnectorComponent";
 export { VisuallyHidden } from "./hidden/VisuallyHidden";
 export { Icon } from "./media/Icon";
+export { Symbol } from "./media/Symbol";
+export { LogoBox, SymbolBox } from "./media/Symbol.styled";
 export { MotionPanel } from "./panel/MotionPanel";
 export { ResizablePanel } from "./panel/ResizablePanel";
 export { PlainLink } from "./plain-link/PlainLink";
