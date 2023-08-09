@@ -1,8 +1,6 @@
 import { useMimirorgTheme } from "../../../..";
-import { FlowConnectorComponent } from "../../../atoms/flow/connectors/FlowConnectorComponent";
-import { Symbol } from "../../../atoms/media/Symbol";
-import { LogoBox, SymbolBox } from "../../../atoms/media/Symbol.styled";
-import { Text } from "../../../atoms/text/Text";
+import { FlowConnectorComponent, LogoBox, Symbol, SymbolBox, Text } from "../../../atoms";
+
 import { ConnectorDirection, FlowConnector } from "../../../core/types";
 import { FlowNodeBox, FlowNodeBoxProps, FlowNodeContainer, FlowNodeContentBox } from "./FlowNodeComponent.styled";
 

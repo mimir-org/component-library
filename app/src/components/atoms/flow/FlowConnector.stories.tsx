@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Position } from "react-flow-renderer";
+import { Position } from "reactflow";
 import { ConnectorDirection, FlowConnector, FlowHandle } from "../../core/types";
-import { createId } from "./../../core/services";
+import { createId } from "../../core/services";
 import { FlowConnectorComponent } from "./connectors/FlowConnectorComponent";
 
 const createHandle = (
