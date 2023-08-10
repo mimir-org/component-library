@@ -11,5 +11,5 @@ export { ResizablePanel } from "./panel/ResizablePanel";
 export { PlainLink } from "./plain-link/PlainLink";
 export { Spinner } from "./spinner/Spinner";
 export { Heading } from "./text/Heading";
-export { Text } from "./text/Text";
+export { MotionText, Text } from "./text/Text";
 export { Tooltip } from "./tooltip/Tooltip";
