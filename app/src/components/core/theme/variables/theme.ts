@@ -3,6 +3,7 @@ import { animation } from "./animation";
 import { border } from "./border";
 import { dark } from "./color/dark";
 import { light } from "./color/light";
+import { elevation } from "./elevation";
 import { query } from "./query";
 import { shadow } from "./shadow";
 import { spacing } from "./spacing";
@@ -16,6 +17,7 @@ export const theme: Theme = {
   shadow: shadow,
   spacing: spacing,
   state: state,
+  elevation: elevation,
   animation: animation,
   queries: query,
 };

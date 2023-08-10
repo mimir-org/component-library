@@ -1,3 +1,4 @@
+import { ElevationSystem } from "../../props/elevation";
 import { AnimationSystem } from "./animationSystem";
 import { BorderSystem } from "./borderSystem";
 import { ColorSystem } from "./colorSystem";
@@ -14,6 +15,7 @@ export interface Theme {
   shadow: ShadowSystem;
   spacing: SpacingSystem;
   state: StateSystem;
+  elevation: ElevationSystem;
   animation: AnimationSystem;
   queries: QuerySystem;
 }
