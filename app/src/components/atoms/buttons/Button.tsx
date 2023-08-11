@@ -33,7 +33,7 @@ export const Button = forwardRef((props: ButtonProps, ref: ForwardedRef<HTMLButt
       iconOnly={iconOnly}
       iconPlacement={iconPlacement}
       buttonColor={buttonColor}
-      {...theme.mimir.animation.buttonTap}
+      {...theme.mimirorg.animation.buttonTap}
       {...delegated}
     >
       {icon && iconOnly ? (

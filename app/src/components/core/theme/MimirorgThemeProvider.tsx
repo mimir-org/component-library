@@ -12,7 +12,7 @@ import { usePrefersTheme } from "../hooks/usePrefersTheme";
 import { themeBuilder } from "./variables/theme";
 
 export interface MimirorgThemeProviderProps {
-  theme?: "light" | "dark";
+  theme?: "light" | "dark" | "tyle.light" | "tyle.dark";
 }
 
 /**
@@ -27,7 +27,7 @@ export const MimirorgThemeProvider = ({ theme = "light", children }: PropsWithCh
   const [colorTheme] = usePrefersTheme(theme);
 
   const applicationTheme = {
-    mimir: themeBuilder(colorTheme),
+    mimirorg: themeBuilder(colorTheme),
   };
 
   return (

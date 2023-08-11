@@ -77,7 +77,7 @@ export const CalendarComponent = forwardRef((props: CalendarComponentProps, ref:
       />
       {reset && (
         <Button
-          spacing={{ ml: theme.mimir.spacing.s }}
+          spacing={{ ml: theme.mimirorg.spacing.s }}
           icon={icon != null ? icon : <Delete size={iconSize} />}
           iconOnly
           variant="outlined"
@@ -94,7 +94,7 @@ export const CalendarComponent = forwardRef((props: CalendarComponentProps, ref:
         }
       >
         <Button
-          spacing={{ ml: theme.mimir.spacing.s }}
+          spacing={{ ml: theme.mimirorg.spacing.s }}
           icon={icon != null ? icon : <CalendarMonth size={iconSize} />}
           iconOnly
           variant="outlined"

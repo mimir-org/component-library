@@ -14,7 +14,7 @@ export const DialogDescription = ({ children, hide }: DialogDescriptionProps) =>
   return (
     <ConditionalWrapper condition={hide} wrapper={(c) => <VisuallyHidden asChild>{c}</VisuallyHidden>}>
       <DialogPrimitive.Description asChild>
-        <Text variant={"title-medium"} textAlign={"center"} color={theme.mimir.color.surface.on}>
+        <Text variant={"title-medium"} textAlign={"center"} color={theme.mimirorg.color.surface.on}>
           {children}
         </Text>
       </DialogPrimitive.Description>

@@ -7,23 +7,23 @@ import { focus } from "../../../core/theme/helpers";
 export const CheckboxRoot = styled(CheckboxPrimitive.Root)`
   all: unset;
   position: relative;
-  border-radius: ${(props) => props.theme.mimir.border.radius.small};
-  color: ${(props) => props.theme.mimir.color.primary.base};
+  border-radius: ${(props) => props.theme.mimirorg.border.radius.small};
+  color: ${(props) => props.theme.mimirorg.color.primary.base};
   height: 24px;
   width: 24px;
 
   :disabled {
-    color: ${(props) => props.theme.mimir.color.outline.base};
+    color: ${(props) => props.theme.mimirorg.color.outline.base};
     cursor: not-allowed;
   }
 
   :not(:disabled) {
     :hover {
-      background-color: ${(props) => props.theme.mimir.color.secondary.container?.base};
+      background-color: ${(props) => props.theme.mimirorg.color.secondary.container?.base};
     }
 
     :active {
-      color: ${(props) => props.theme.mimir.color.surface.on};
+      color: ${(props) => props.theme.mimirorg.color.surface.on};
     }
   }
 

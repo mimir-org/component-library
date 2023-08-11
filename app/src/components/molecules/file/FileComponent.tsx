@@ -41,7 +41,7 @@ export const FileComponent = forwardRef((props: Props, ref: ForwardedRef<HTMLDiv
         <Button
           icon={<Attachment size={24} />}
           onClick={() => inputFile?.current?.click()}
-          spacing={{ pl: theme.mimir.spacing.l, pr: theme.mimir.spacing.l }}
+          spacing={{ pl: theme.mimirorg.spacing.l, pr: theme.mimirorg.spacing.l }}
           disabled={disabled}
         >
           {buttonText}

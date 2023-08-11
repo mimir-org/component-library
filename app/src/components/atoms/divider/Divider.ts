@@ -14,7 +14,7 @@ interface DividerProps {
  * @see https://www.radix-ui.com/docs/primitives/components/separator
  */
 export const Divider = styled(Separator.Root)<DividerProps>`
-  background-color: ${(props) => (props.color ? props.color : props.theme.mimir.color.primary.base)};
+  background-color: ${(props) => (props.color ? props.color : props.theme.mimirorg.color.primary.base)};
   margin: 0 auto;
   height: 1px;
   width: 100%;

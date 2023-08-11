@@ -45,7 +45,7 @@ export const Popover = ({
       <PopoverPrimitive.Trigger asChild>{children}</PopoverPrimitive.Trigger>
       <PopoverPrimitive.Portal>
         <PopoverPrimitive.Content asChild avoidCollisions sideOffset={offset} side={placement} align={align}>
-          <PopoverContent {...theme.mimir.animation.scale} {...delegated}>
+          <PopoverContent {...theme.mimirorg.animation.scale} {...delegated}>
             {containsTextOnly ? (
               <Text variant={"body-medium"} textAlign={"center"}>
                 {content}

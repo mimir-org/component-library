@@ -9,7 +9,7 @@ export const CalendarContentContainer = styled.div<HTMLAttributes<HTMLDivElement
     background-color: inherit;
     border: none;
     ${getTextRole("body-large")};
-    border-radius: ${(props) => props.theme.mimir.border.radius.medium};
+    border-radius: ${(props) => props.theme.mimirorg.border.radius.medium};
   }
   .react-calendar--doubleView {
     width: 700px;
@@ -46,14 +46,14 @@ export const CalendarContentContainer = styled.div<HTMLAttributes<HTMLDivElement
   .react-calendar__navigation button {
     min-width: 44px;
     background: none;
-    border-radius: ${(props) => props.theme.mimir.border.radius.medium};
+    border-radius: ${(props) => props.theme.mimirorg.border.radius.medium};
   }
   .react-calendar__navigation button:disabled {
-    background-color: ${(props) => props.theme.mimir.color.outline.base};
+    background-color: ${(props) => props.theme.mimirorg.color.outline.base};
   }
   .react-calendar__navigation button:enabled:hover,
   .react-calendar__navigation button:enabled:focus {
-    background-color: ${(props) => props.theme.mimir.color.secondary.container?.base};
+    background-color: ${(props) => props.theme.mimirorg.color.secondary.container?.base};
   }
   .react-calendar__month-view__weekdays {
     text-align: center;
@@ -87,43 +87,43 @@ export const CalendarContentContainer = styled.div<HTMLAttributes<HTMLDivElement
   }
   .react-calendar__tile {
     max-width: 100%;
-    padding: ${(props) => props.theme.mimir.spacing.l};
+    padding: ${(props) => props.theme.mimirorg.spacing.l};
     background: none;
     text-align: center;
     line-height: 16px;
-    border-radius: ${(props) => props.theme.mimir.border.radius.medium};
+    border-radius: ${(props) => props.theme.mimirorg.border.radius.medium};
   }
   .react-calendar__tile:disabled {
-    background-color: ${(props) => props.theme.mimir.color.outline.base};
+    background-color: ${(props) => props.theme.mimirorg.color.outline.base};
   }
   .react-calendar__tile:enabled:hover,
   .react-calendar__tile:enabled:focus {
-    background-color: ${(props) => props.theme.mimir.color.secondary.container?.base};
+    background-color: ${(props) => props.theme.mimirorg.color.secondary.container?.base};
   }
   .react-calendar__tile--now {
-    background-color: ${(props) => props.theme.mimir.color.secondary.container?.base};
-    color: ${(props) => props.theme.mimir.color.text.base};
+    background-color: ${(props) => props.theme.mimirorg.color.secondary.container?.base};
+    color: ${(props) => props.theme.mimirorg.color.text.base};
   }
   .react-calendar__tile--now:enabled:hover,
   .react-calendar__tile--now:enabled:focus {
-    background-color: ${(props) => props.theme.mimir.color.secondary.container?.base};
+    background-color: ${(props) => props.theme.mimirorg.color.secondary.container?.base};
   }
   .react-calendar__tile--hasActive {
-    background: ${(props) => props.theme.mimir.color.tertiary.container?.base};
+    background: ${(props) => props.theme.mimirorg.color.tertiary.container?.base};
   }
   .react-calendar__tile--hasActive:enabled:hover,
   .react-calendar__tile--hasActive:enabled:focus {
-    background-color: ${(props) => props.theme.mimir.color.secondary.container?.base};
+    background-color: ${(props) => props.theme.mimirorg.color.secondary.container?.base};
   }
   .react-calendar__tile--active {
-    background-color: ${(props) => props.theme.mimir.color.tertiary.container?.base};
-    color: ${(props) => props.theme.mimir.color.text.base};
+    background-color: ${(props) => props.theme.mimirorg.color.tertiary.container?.base};
+    color: ${(props) => props.theme.mimirorg.color.text.base};
   }
   .react-calendar__tile--active:enabled:hover,
   .react-calendar__tile--active:enabled:focus {
-    background-color: ${(props) => props.theme.mimir.color.secondary.container?.base};
+    background-color: ${(props) => props.theme.mimirorg.color.secondary.container?.base};
   }
   .react-calendar--selectRange .react-calendar__tile--hover {
-    background-color: ${(props) => props.theme.mimir.color.surface.variant.base};
+    background-color: ${(props) => props.theme.mimirorg.color.surface.variant.base};
   }
 `;

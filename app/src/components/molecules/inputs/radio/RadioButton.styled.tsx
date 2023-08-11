@@ -6,24 +6,24 @@ export const RadioButtonRoot = styled(RadioGroupPrimitive.Root)`
   all: unset;
   display: flex;
   flex-direction: ${(props) => props.orientation && props.orientation};
-  gap: ${(props) => props.theme.mimir.spacing.l};
+  gap: ${(props) => props.theme.mimirorg.spacing.l};
 `;
 
 export const RadioGroupItem = styled(RadioGroupPrimitive.Item)`
   all: unset;
-  background-color: ${(props) => props.theme.mimir.color.surface.variant.base};
+  background-color: ${(props) => props.theme.mimirorg.color.surface.variant.base};
   width: 20px;
   height: 20px;
-  border-radius: ${(props) => props.theme.mimir.border.radius.round};
-  box-shadow: ${(props) => props.theme.mimir.shadow.small};
+  border-radius: ${(props) => props.theme.mimirorg.border.radius.round};
+  box-shadow: ${(props) => props.theme.mimirorg.shadow.small};
 
   :hover {
     cursor: pointer;
-    background-color: ${(props) => props.theme.mimir.color.secondary.container?.base};
+    background-color: ${(props) => props.theme.mimirorg.color.secondary.container?.base};
   }
 
   :focus {
-    box-shadow: ${(props) => props.theme.mimir.shadow.small};
+    box-shadow: ${(props) => props.theme.mimirorg.shadow.small};
   }
 `;
 
@@ -39,8 +39,8 @@ export const RadioGroupIndicator = styled(RadioGroupPrimitive.Indicator)`
     display: block;
     width: 50%;
     height: 50%;
-    border-radius: ${(props) => props.theme.mimir.border.radius.round};
-    background-color: ${(props) => props.theme.mimir.color.primary.base};
+    border-radius: ${(props) => props.theme.mimirorg.border.radius.round};
+    background-color: ${(props) => props.theme.mimirorg.color.primary.base};
     margin: 25% auto;
   }
 `;

@@ -26,21 +26,21 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  gap: ${(props) => props.theme.mimir.spacing.s};
+  gap: ${(props) => props.theme.mimirorg.spacing.s};
   flex-direction: ${(props) => props.iconPlacement === "left" && "row-reverse"};
 
   white-space: nowrap;
   text-decoration: none;
 
-  font: ${(props) => props.theme.mimir.typography.roles.label.large.font};
-  line-height: ${(props) => props.theme.mimir.typography.roles.label.large.lineHeight};
-  letter-spacing: ${(props) => props.theme.mimir.typography.roles.label.large.letterSpacing};
+  font: ${(props) => props.theme.mimirorg.typography.roles.label.large.font};
+  line-height: ${(props) => props.theme.mimirorg.typography.roles.label.large.lineHeight};
+  letter-spacing: ${(props) => props.theme.mimirorg.typography.roles.label.large.letterSpacing};
 
   height: 32px;
   width: fit-content;
   min-width: 70px;
-  padding: ${(props) => props.theme.mimir.spacing.base} ${(props) => props.theme.mimir.spacing.xl};
-  border-radius: ${(props) => props.theme.mimir.border.radius.medium};
+  padding: ${(props) => props.theme.mimirorg.spacing.base} ${(props) => props.theme.mimirorg.spacing.xl};
+  border-radius: ${(props) => props.theme.mimirorg.border.radius.medium};
 
   :hover {
     cursor: pointer;
@@ -59,14 +59,14 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
   ${focus};
 
   ${({ variant, buttonColor, ...props }) => {
-    const { color, border } = props.theme.mimir;
+    const { color, border } = props.theme.mimirorg;
 
     switch (variant) {
       case "filled": {
-        return filledButton(color, getButtonColor(props.theme.mimir, buttonColor));
+        return filledButton(color, getButtonColor(props.theme.mimirorg, buttonColor));
       }
       case "outlined": {
-        return outlinedButton(color, getButtonColor(props.theme.mimir, buttonColor));
+        return outlinedButton(color, getButtonColor(props.theme.mimirorg, buttonColor));
       }
       case "text": {
         return textButton(color);
@@ -80,7 +80,7 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
   ${({ iconOnly, ...props }) =>
     iconOnly &&
     css`
-      padding: ${props.theme.mimir.spacing.xs};
+      padding: ${props.theme.mimirorg.spacing.xs};
       min-width: revert;
       width: 24px;
       height: 24px;

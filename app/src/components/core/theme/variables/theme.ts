@@ -23,7 +23,18 @@ export const theme: Theme = {
 };
 
 export const themeBuilder = (colorTheme: string): Theme => {
-  const targetTheme = colorTheme === "dark" ? dark : light;
+  let targetTheme = light;
+  switch (colorTheme) {
+    case "dark":
+      targetTheme = dark;
+      break;
+    case "tyle.light":
+      targetTheme = tyleLight;
+      break;
+    case "tyle.dark":
+      targetTheme = tyleDark;
+      break;
+  }
 
   return {
     ...theme,

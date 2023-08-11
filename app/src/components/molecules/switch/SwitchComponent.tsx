@@ -34,7 +34,7 @@ export const SwitchComponent = (props: SwitchComponentProps) => {
 
   return (
     <Flexbox alignItems={"center"}>
-      <Text htmlFor="airplane-mode" as="label" variant="label-medium" spacing={{ mr: theme.mimir.spacing.l }}>
+      <Text htmlFor="airplane-mode" as="label" variant="label-medium" spacing={{ mr: theme.mimirorg.spacing.l }}>
         {props.text}
       </Text>
       <SwitchRoot id="airplane-mode" checked={status} onCheckedChange={onCheckedChange}>

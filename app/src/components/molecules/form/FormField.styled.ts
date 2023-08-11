@@ -9,7 +9,7 @@ interface FormFieldLabelTextProps {
 
 export const FormFieldLabelText = styled.span<FormFieldLabelTextProps>`
   ${({ variant }) => getTextRole(variant)}
-  color: ${(props) => props.theme.mimir.color.text.base};
-  padding-left: ${(props) => props.indent && props.theme.mimir.spacing.l};
+  color: ${(props) => props.theme.mimirorg.color.text.base};
+  padding-left: ${(props) => props.indent && props.theme.mimirorg.spacing.l};
   border-left: ${(props) => props.indent && "1px solid transparent"};
 `;

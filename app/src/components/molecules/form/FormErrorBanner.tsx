@@ -14,10 +14,10 @@ export const FormErrorBanner = ({ children }: FormErrorBannerProps) => {
 
   return (
     <Box
-      {...theme.mimir.animation.fade}
-      spacing={{ p: theme.mimir.spacing.l }}
-      bgColor={theme.mimir.color.error.on}
-      color={theme.mimir.color.error.base}
+      {...theme.mimirorg.animation.fade}
+      spacing={{ p: theme.mimirorg.spacing.l }}
+      bgColor={theme.mimirorg.color.error.on}
+      color={theme.mimirorg.color.error.base}
     >
       {children}
     </Box>

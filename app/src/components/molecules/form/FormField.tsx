@@ -26,8 +26,8 @@ export const FormField = ({ label, error, indent = true, children }: PropsWithCh
   const hasLabel = !!label?.length;
 
   return (
-    <Flexbox flexDirection={"column"} gap={theme.mimir.spacing.s}>
-      <Flexbox as={hasLabel ? "label" : "div"} flexDirection={"column"} gap={theme.mimir.spacing.xs}>
+    <Flexbox flexDirection={"column"} gap={theme.mimirorg.spacing.s}>
+      <Flexbox as={hasLabel ? "label" : "div"} flexDirection={"column"} gap={theme.mimirorg.spacing.xs}>
         <ConditionalWrapper
           condition={hasLabel}
           wrapper={(c) => (
@@ -44,9 +44,9 @@ export const FormField = ({ label, error, indent = true, children }: PropsWithCh
       </Flexbox>
 
       {error && error.message && (
-        <Flexbox alignItems={"center"} gap={theme.mimir.spacing.s} {...theme.mimir.animation.fade}>
-          <ExclamationCircle size={"14px"} color={theme.mimir.color.error.base} />
-          <Text variant={"label-medium"} color={theme.mimir.color.error.base}>
+        <Flexbox alignItems={"center"} gap={theme.mimirorg.spacing.s} {...theme.mimirorg.animation.fade}>
+          <ExclamationCircle size={"14px"} color={theme.mimirorg.color.error.base} />
+          <Text variant={"label-medium"} color={theme.mimirorg.color.error.base}>
             {error.message}
           </Text>
         </Flexbox>
