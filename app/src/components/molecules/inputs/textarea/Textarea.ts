@@ -2,6 +2,7 @@ import { TextareaHTMLAttributes } from "react";
 import styled from "styled-components";
 import { Sizing } from "../../../core/props";
 import { focus, getTextRole, placeholder, sizingMixin } from "../../../core/theme/helpers";
+import { mimirColorReference } from "../../../core/theme/variables/color/reference/mimirColorReference";
 
 /**
  * A simple wrapper over the textarea-tag, with styling that follows library conventions.
@@ -15,7 +16,10 @@ export const Textarea = styled.textarea<TextareaProps>`
   min-height: 150px;
   width: 100%;
   padding: ${(props) => props.theme.mimirorg.spacing.base};
-  color: ${(props) => props.theme.mimirorg.color.text.base};
+  color: ${(props) =>
+    props.theme.mimirorg.color.reference === mimirColorReference
+      ? props.theme.mimirorg.color.text.base
+      : props.theme.mimirorg.color.surface.on};
 
   background-color: ${(props) => props.theme.mimirorg.color.pure.base};
   color: ${(props) => props.theme.mimirorg.color.background.on};

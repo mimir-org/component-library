@@ -3,6 +3,7 @@ import { CheckBox, CheckBoxOutlineBlank } from "@styled-icons/material-rounded";
 import { motion } from "framer-motion";
 import styled from "styled-components";
 import { focus } from "../../../core/theme/helpers";
+import { mimirColorReference } from "../../../core/theme/variables/color/reference/mimirColorReference";
 
 export const CheckboxRoot = styled(CheckboxPrimitive.Root)`
   all: unset;
@@ -13,13 +14,19 @@ export const CheckboxRoot = styled(CheckboxPrimitive.Root)`
   width: 24px;
 
   :disabled {
-    color: ${(props) => props.theme.mimirorg.color.outline.base};
+    color: ${(props) =>
+      props.theme.mimirorg.color.reference === mimirColorReference
+        ? props.theme.mimirorg.color.outline.base
+        : props.theme.mimirorg.color.surface.variant.on};
     cursor: not-allowed;
   }
 
   :not(:disabled) {
     :hover {
-      background-color: ${(props) => props.theme.mimirorg.color.secondary.container?.base};
+      background-color: ${(props) =>
+        props.theme.mimirorg.color.reference === mimirColorReference
+          ? props.theme.mimirorg.color.secondary.container?.base
+          : props.theme.mimirorg.color.secondary.base};
     }
 
     :active {

@@ -1,5 +1,6 @@
 import * as Separator from "@radix-ui/react-separator";
 import styled, { css } from "styled-components";
+import { mimirColorReference } from "../../core/theme/variables/color/reference/mimirColorReference";
 
 interface DividerProps {
   orientation?: "horizontal" | "vertical";
@@ -14,7 +15,12 @@ interface DividerProps {
  * @see https://www.radix-ui.com/docs/primitives/components/separator
  */
 export const Divider = styled(Separator.Root)<DividerProps>`
-  background-color: ${(props) => (props.color ? props.color : props.theme.mimirorg.color.primary.base)};
+  background-color: ${(props) =>
+    props.color
+      ? props.color
+      : props.theme.mimirorg.color.reference === mimirColorReference
+      ? props.theme.mimirorg.color.primary.base
+      : props.theme.mimirorg.color.secondary.base};
   margin: 0 auto;
   height: 1px;
   width: 100%;

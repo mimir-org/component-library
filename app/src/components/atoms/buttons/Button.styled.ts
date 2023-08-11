@@ -19,6 +19,7 @@ export type ButtonContainerProps = Flex &
     variant?: "filled" | "outlined" | "text" | "round";
     iconPlacement?: "left" | "right";
     iconOnly?: boolean;
+    dangerousAction?: boolean;
     buttonColor?: ButtonColor;
   };
 
@@ -58,18 +59,18 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
 
   ${focus};
 
-  ${({ variant, buttonColor, ...props }) => {
+  ${({ variant, dangerousAction, buttonColor, ...props }) => {
     const { color, border } = props.theme.mimirorg;
 
     switch (variant) {
       case "filled": {
-        return filledButton(color, getButtonColor(props.theme.mimirorg, buttonColor));
+        return filledButton(color, dangerousAction, getButtonColor(props.theme.mimirorg, buttonColor));
       }
       case "outlined": {
-        return outlinedButton(color, getButtonColor(props.theme.mimirorg, buttonColor));
+        return outlinedButton(color, dangerousAction, getButtonColor(props.theme.mimirorg, buttonColor));
       }
       case "text": {
-        return textButton(color);
+        return textButton(color, dangerousAction);
       }
       case "round": {
         return roundButton(color, border);
@@ -77,7 +78,7 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
     }
   }};
 
-  ${({ iconOnly, ...props }) =>
+  ${({ iconOnly, dangerousAction, ...props }) =>
     iconOnly &&
     css`
       padding: ${props.theme.mimirorg.spacing.xs};
@@ -90,6 +91,10 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
         max-width: 18px;
         max-height: 18px;
       }
+      &:hover {
+        background-color: ${dangerousAction ? props.theme.mimirorg.color.dangerousAction.base : ""};
+        color: white;
+      }
     `};
 
   ${flexMixin};
@@ -99,7 +104,6 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
 
 ButtonContainer.defaultProps = {
   variant: "filled",
-  buttonColor: "primary",
 };
 
 /**

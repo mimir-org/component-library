@@ -12,6 +12,7 @@ export type ButtonProps = ButtonContainerProps & {
   iconPlacement?: "left" | "right";
   iconOnly?: boolean;
   textVariant?: TextTypes;
+  dangerousAction?: boolean;
   buttonColor?: "primary" | "success" | "warning" | "error";
 };
 
@@ -53,5 +54,4 @@ Button.defaultProps = {
   type: "button",
   iconPlacement: "right",
   textVariant: "body-small",
-  buttonColor: "primary",
 };
