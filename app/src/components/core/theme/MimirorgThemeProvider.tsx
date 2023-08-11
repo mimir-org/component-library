@@ -12,7 +12,7 @@ import { usePrefersTheme } from "../hooks/usePrefersTheme";
 import { themeBuilder } from "./variables/theme";
 
 export interface MimirorgThemeProviderProps {
-  theme?: "light" | "dark" | "tyle.light" | "tyle.dark";
+  theme?: "light" | "dark" | "tyleLight" | "tyleDark";
 }
 
 /**

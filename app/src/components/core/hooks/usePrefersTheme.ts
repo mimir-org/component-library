@@ -14,7 +14,7 @@ export function usePrefersTheme(initial: string): [colorTheme: string] {
   useEffect(() => {
     function setPreferredTheme() {
       const savedTheme = localStorage.getItem("theme");
-      if (savedTheme && ["dark", "light", "tyle.dark", "tyle.light"].includes(savedTheme)) {
+      if (savedTheme && ["dark", "light", "tyleDark", "tyleLight"].includes(savedTheme)) {
         setColorTheme(savedTheme);
       }
     }

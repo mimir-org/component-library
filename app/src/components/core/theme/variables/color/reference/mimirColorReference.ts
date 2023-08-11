@@ -4,7 +4,7 @@ import { ColorReference } from "../../../props/colorReference";
  * Reference colors have been generated with https://m3.material.io/theme-builder, and by using company main colors as input source.
  * Some of the colors have been shifted slightly after generation to better match the wanted color profile.
  */
-export const colorReference: ColorReference = {
+export const mimirColorReference: ColorReference = {
   primary: {
     0: "#000000",
     10: "#272738", // Bastille
@@ -123,6 +123,21 @@ export const colorReference: ColorReference = {
     90: "#D4D4D4", // Light Gray
     95: "#D9D9D9", // Gainsboro
     99: "#fffbff",
+    100: "#ffffff",
+  },
+  dangerousAction: {
+    0: "#000000",
+    10: "#A20021",
+    20: "#b13236",
+    30: "#be4e4c",
+    40: "#cb6963",
+    50: "#d7827b",
+    60: "#e19a94",
+    70: "#eab3ae",
+    80: "#f2ccc8",
+    90: "#f5d5d2",
+    95: "#f9e6e3",
+    99: "#fbeae8",
     100: "#ffffff",
   },
   functionAspect: {

@@ -3,6 +3,8 @@ import { animation } from "./animation";
 import { border } from "./border";
 import { dark } from "./color/dark";
 import { light } from "./color/light";
+import { tyleDark } from "./color/tyleDark";
+import { tyleLight } from "./color/tyleLight";
 import { elevation } from "./elevation";
 import { query } from "./query";
 import { shadow } from "./shadow";
@@ -28,10 +30,10 @@ export const themeBuilder = (colorTheme: string): Theme => {
     case "dark":
       targetTheme = dark;
       break;
-    case "tyle.light":
+    case "tyleLight":
       targetTheme = tyleLight;
       break;
-    case "tyle.dark":
+    case "tyleDark":
       targetTheme = tyleDark;
       break;
   }
