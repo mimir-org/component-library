@@ -5,6 +5,7 @@ export * from "./components/core/hooks";
 export * from "./components/core/props";
 export * from "./components/core/services";
 export * from "./components/core/theme";
+export * from "./components/core/theme/helpers";
 export * from "./components/icons";
 export * from "./components/layouts";
 export * from "./components/molecules";

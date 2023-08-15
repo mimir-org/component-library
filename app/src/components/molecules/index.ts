@@ -1,6 +1,14 @@
+export type { AlertDialogActionItem } from "./alert-dialog/components/AlertDialogAction";
+export type { AlertDialogCancelItem } from "./alert-dialog/components/AlertDialogCancel";
 export type { FileInfo } from "./file/types/fileInfo";
 export type { CalendarVariant } from "./inputs/calendar/CalendarComponent.styled";
 export type { SelectVariant } from "./inputs/select/Select";
+
+export { AlertDialog } from "./alert-dialog/AlertDialog";
+export { AlertDialogAction } from "./alert-dialog/components/AlertDialogAction";
+export { AlertDialogCancel } from "./alert-dialog/components/AlertDialogCancel";
+export { AlertDialogDescription } from "./alert-dialog/components/AlertDialogDescription";
+export { AlertDialogTitle } from "./alert-dialog/components/AlertDialogTitle";
 
 export { Dialog } from "./dialog/Dialog";
 export { DialogDescription } from "./dialog/components/DialogDescription";
