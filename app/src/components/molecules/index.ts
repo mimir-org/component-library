@@ -18,6 +18,7 @@ export { FormLegend } from "./form/FormLegend";
 
 export { CalendarComponent } from "./inputs/calendar/CalendarComponent";
 export { Checkbox } from "./inputs/checkbox/Checkbox";
+export { Counter } from "./inputs/counter/Counter";
 export { Input } from "./inputs/input/Input";
 export { RadioButton } from "./inputs/radio/RadioButton";
 export { RichTextarea } from "./inputs/rich-textarea/RichTextarea";

@@ -15,5 +15,5 @@ export { hideScrollbar } from "./utils/hideScrollbar";
 export { layer } from "./utils/layer";
 export { translucify } from "./utils/translucify";
 
-export { focus } from "./common/focus";
+export { focus, focusRaw } from "./common/focus";
 export { placeholder } from "./common/placeholder";
