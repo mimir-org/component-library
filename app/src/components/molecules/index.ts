@@ -30,3 +30,5 @@ export { Popover } from "./popover/Popover";
 export { toast } from "./toaster/toast";
 
 export { FlowNodeComponent } from "./flow/nodes/FlowNodeComponent";
+
+export { Table, Tbody, Td, Th, Thead, Tr } from "./table/Table";

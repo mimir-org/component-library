@@ -1,3 +1,4 @@
+export type { Actionable } from "./actionable";
 export type { ApplicationSetting } from "./applicationSetting";
 export { ConnectorDirection } from "./flowTypes";
 export type { FlowConnector, FlowHandle } from "./flowTypes";
