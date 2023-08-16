@@ -9,12 +9,12 @@ export type FormLegendProps = {
  * A simple wrapper around legend
  */
 export const FormLegend = styled.legend<FormLegendProps>`
-  color: ${(props) => (props.color != null ? props.color : props.theme.mimir.color.text.on)};
+  color: ${(props) => (props.color != null ? props.color : props.theme.mimirorg.color.text.on)};
   background-color: ${(props) =>
-    props.backgroundColor != null ? props.backgroundColor : props.theme.mimir.color.primary.base};
-  padding: ${(props) => props.theme.mimir.spacing.s} ${(props) => props.theme.mimir.spacing.l};
-  padding-top: ${(props) => props.theme.mimir.spacing.s};
-  margin-bottom: ${(props) => props.theme.mimir.spacing.xl};
-  border-radius: ${(props) => props.theme.mimir.border.radius.small};
-  box-shadow: ${(props) => props.theme.mimir.shadow.medium};
+    props.backgroundColor != null ? props.backgroundColor : props.theme.mimirorg.color.primary.base};
+  padding: ${(props) => props.theme.mimirorg.spacing.s} ${(props) => props.theme.mimirorg.spacing.l};
+  padding-top: ${(props) => props.theme.mimirorg.spacing.s};
+  margin-bottom: ${(props) => props.theme.mimirorg.spacing.xl};
+  border-radius: ${(props) => props.theme.mimirorg.border.radius.small};
+  box-shadow: ${(props) => props.theme.mimirorg.shadow.medium};
 `;

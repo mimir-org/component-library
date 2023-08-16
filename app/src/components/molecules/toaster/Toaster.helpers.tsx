@@ -1,7 +1,9 @@
 import { CheckCircle, XCircle } from "@styled-icons/heroicons-outline";
 import { CSSProperties } from "react";
 import { DefaultToastOptions } from "react-hot-toast";
+import { translucify } from "../../core/theme/helpers";
 import { Theme } from "../../core/theme/props/theme";
+import { mimirColorReference } from "../../core/theme/variables/color/reference/mimirColorReference";
 
 export const getCustomToasterStyles = (theme: Theme): DefaultToastOptions => ({
   style: {
@@ -12,7 +14,10 @@ export const getCustomToasterStyles = (theme: Theme): DefaultToastOptions => ({
     font: theme.typography.roles.label.large.font,
     letterSpacing: theme.typography.roles.label.large.letterSpacing,
     lineHeight: theme.typography.roles.label.large.lineHeight,
-    background: theme.color.secondary.base,
+    background:
+      theme.color.reference === mimirColorReference
+        ? theme.color.secondary.base
+        : translucify(theme.color.secondary.base, 0.85),
     color: theme.color.secondary.on,
   },
   success: {

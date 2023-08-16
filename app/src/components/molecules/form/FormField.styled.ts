@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { TextTypes } from "../../core/props";
 import { getTextRole } from "../../core/theme/helpers";
+import { mimirColorReference } from "../../core/theme/variables/color/reference/mimirColorReference";
 
 interface FormFieldLabelTextProps {
   indent?: boolean;
@@ -9,7 +10,10 @@ interface FormFieldLabelTextProps {
 
 export const FormFieldLabelText = styled.span<FormFieldLabelTextProps>`
   ${({ variant }) => getTextRole(variant)}
-  color: ${(props) => props.theme.mimir.color.text.base};
-  padding-left: ${(props) => props.indent && props.theme.mimir.spacing.l};
+  color: ${(props) =>
+    props.theme.mimirorg.color.reference === mimirColorReference
+      ? props.theme.mimirorg.color.text.base
+      : props.theme.mimirorg.color.surface.variant.on};
+  padding-left: ${(props) => props.indent && props.theme.mimirorg.spacing.l};
   border-left: ${(props) => props.indent && "1px solid transparent"};
 `;

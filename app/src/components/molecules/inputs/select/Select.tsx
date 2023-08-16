@@ -29,7 +29,7 @@ export const Select = <Option, IsMulti extends boolean = false, Group extends Gr
 ) => {
   const { variant, selectRef, ...reactSelectProps } = props;
   const theme = useTheme();
-  const customStyles = getSelectStyle<Option, IsMulti, Group>(theme.mimir, variant);
+  const customStyles = getSelectStyle<Option, IsMulti, Group>(theme.mimirorg, variant);
 
   return <ReactSelect ref={selectRef} styles={customStyles} {...reactSelectProps} />;
 };

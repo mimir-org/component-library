@@ -22,8 +22,8 @@ export const Spinner = ({ variant, disabled }: SpinnerProps) => {
       {!disabled && (
         <SpinnerOverlay>
           <SpinnerContainer>
-            {variant && variant === "circle" && <CircleLoader color={theme.mimir.color.primary.base} />}
-            {variant && variant === "scale" && <ScaleLoader color={theme.mimir.color.primary.base} />}
+            {variant && variant === "circle" && <CircleLoader color={theme.mimirorg.color.primary.base} />}
+            {variant && variant === "scale" && <ScaleLoader color={theme.mimirorg.color.primary.base} />}
           </SpinnerContainer>
         </SpinnerOverlay>
       )}

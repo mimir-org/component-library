@@ -47,14 +47,14 @@ export const CalendarComponentInput = styled(InputContainer)<CalendarComponentIn
   width: 100%;
 
   :disabled {
-    color: ${(props) => props.theme.mimir.color.surface.variant.on};
-    background-color: ${(props) => props.theme.mimir.color.surface.variant.base};
+    color: ${(props) => props.theme.mimirorg.color.surface.variant.on};
+    background-color: ${(props) => props.theme.mimirorg.color.surface.variant.base};
   }
 
   ${({ theme, isDisabled }) =>
     isDisabled &&
     css`
-      color: ${theme.mimir.color.surface.variant.on} !important;
-      background-color: ${theme.mimir.color.outline.base} !important;
+      color: ${theme.mimirorg.color.surface.variant.on} !important;
+      background-color: ${theme.mimirorg.color.outline.base} !important;
     `};
 `;

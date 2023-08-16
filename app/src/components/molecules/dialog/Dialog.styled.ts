@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 import { Flex, Sizing } from "../../core/props";
 import { flexMixin, sizingMixin, translucify } from "../../core/theme/helpers";
+import { mimirColorReference } from "../../core/theme/variables/color/reference/mimirColorReference";
 import { Box } from "../../layouts";
 
 export type DialogContentProps = Sizing & Flex;
@@ -16,15 +17,18 @@ export const DialogContent = styled(Box)<DialogContentProps>`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: ${(props) => props.theme.mimir.spacing.xxxl};
+  gap: ${(props) => props.theme.mimirorg.spacing.xxxl};
 
-  background-color: ${(props) => props.theme.mimir.color.surface.base};
-  border-radius: ${(props) => props.theme.mimir.border.radius.large};
+  background-color: ${(props) =>
+    props.theme.mimirorg.color.reference === mimirColorReference
+      ? props.theme.mimirorg.color.surface.base
+      : props.theme.mimirorg.color.background.base};
+  border-radius: ${(props) => props.theme.mimirorg.border.radius.large};
 
   min-height: 380px;
-  padding: ${(props) => props.theme.mimir.spacing.multiple(6)};
+  padding: ${(props) => props.theme.mimirorg.spacing.multiple(6)};
 
-  box-shadow: ${(props) => props.theme.mimir.shadow.small};
+  box-shadow: ${(props) => props.theme.mimirorg.shadow.small};
 
   ${sizingMixin};
   ${flexMixin};
@@ -33,5 +37,5 @@ export const DialogContent = styled(Box)<DialogContentProps>`
 export const DialogOverlay = styled(motion.div)`
   position: fixed;
   inset: 0;
-  background-color: ${(props) => translucify(props.theme.mimir.color.primary.base, 0.08)};
+  background-color: ${(props) => translucify(props.theme.mimirorg.color.primary.base, 0.08)};
 `;

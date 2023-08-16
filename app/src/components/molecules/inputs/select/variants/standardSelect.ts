@@ -1,5 +1,6 @@
 import { GroupBase, StylesConfig } from "react-select";
 import { Theme } from "../../../../core/theme/props";
+import { mimirColorReference } from "../../../../core/theme/variables/color/reference/mimirColorReference";
 
 export const getStandardSelectStyle = <Option, IsMulti extends boolean, Group extends GroupBase<Option>>(
   theme: Theme
@@ -27,7 +28,12 @@ export const getStandardSelectStyle = <Option, IsMulti extends boolean, Group ex
   }),
   placeholder: (base, state) => ({
     ...base,
-    color: state.isDisabled ? theme.color.surface.variant.on : theme.color.background.on,
+    color:
+      theme.color.reference === mimirColorReference
+        ? state.isDisabled
+          ? theme.color.surface.variant.on
+          : theme.color.background.on
+        : theme.color.outline.base,
   }),
   menu: (base) => ({
     ...base,
@@ -51,9 +57,14 @@ export const getStandardSelectStyle = <Option, IsMulti extends boolean, Group ex
     paddingTop: theme.spacing.xs,
     paddingBottom: theme.spacing.xs,
   }),
-  dropdownIndicator: (base) => ({
+  dropdownIndicator: (base, state) => ({
     ...base,
-    color: theme.color.outline.base,
+    color:
+      theme.color.reference === mimirColorReference
+        ? theme.color.outline.base
+        : state.isDisabled
+        ? theme.color.surface.variant.on
+        : theme.color.outline.base,
   }),
   singleValue: (base, state) => ({
     ...base,
@@ -66,7 +77,11 @@ export const getStandardSelectStyle = <Option, IsMulti extends boolean, Group ex
   multiValue: (base, state) => ({
     ...base,
     color: state.isDisabled ? theme.color.surface.variant.on : theme.color.background.on,
-    backgroundColor: state.isDisabled ? theme.color.surface.variant.base : theme.color.secondary.container?.on,
+    backgroundColor: state.isDisabled
+      ? theme.color.surface.variant.base
+      : theme.color.reference === mimirColorReference
+      ? theme.color.secondary.container?.on
+      : theme.color.secondary.container?.base,
     borderRadius: theme.border.radius.small,
     font: theme.typography.roles.label.large.font,
     letterSpacing: theme.typography.roles.label.large.letterSpacing,

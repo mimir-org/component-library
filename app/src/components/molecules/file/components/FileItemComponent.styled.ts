@@ -18,7 +18,7 @@ export const FileItemContainer = styled.div`
     }
   }
 
-  @media screen and ${(props) => props.theme.mimir.queries.phoneAndBelow} {
+  @media screen and ${(props) => props.theme.mimirorg.queries.phoneAndBelow} {
     flex-direction: column;
 
     textarea {
@@ -34,18 +34,18 @@ export const FileInfoContainer = styled.div`
   align-items: center;
   justify-content: start;
   flex-direction: row;
-  margin-right: ${(props) => props.theme.mimir.spacing.xl};
-  padding-left: ${(props) => props.theme.mimir.spacing.s};
-  padding-right: ${(props) => props.theme.mimir.spacing.s};
+  margin-right: ${(props) => props.theme.mimirorg.spacing.xl};
+  padding-left: ${(props) => props.theme.mimirorg.spacing.s};
+  padding-right: ${(props) => props.theme.mimirorg.spacing.s};
 
   :hover {
-    outline: 1px solid ${(props) => props.theme.mimir.color.primary.base};
+    outline: 1px solid ${(props) => props.theme.mimirorg.color.primary.base};
     cursor: pointer;
   }
 
-  @media screen and ${(props) => props.theme.mimir.queries.phoneAndBelow} {
-    margin-top: ${(props) => props.theme.mimir.spacing.xl};
-    margin-bottom: ${(props) => props.theme.mimir.spacing.xl};
+  @media screen and ${(props) => props.theme.mimirorg.queries.phoneAndBelow} {
+    margin-top: ${(props) => props.theme.mimirorg.spacing.xl};
+    margin-bottom: ${(props) => props.theme.mimirorg.spacing.xl};
     width: 100%;
   }
 `;
@@ -54,14 +54,14 @@ export const FileIconContainer = styled.div`
   display: flex;
   min-width: 50px;
 
-  @media screen and ${(props) => props.theme.mimir.queries.phoneAndBelow} {
+  @media screen and ${(props) => props.theme.mimirorg.queries.phoneAndBelow} {
   }
 `;
 
 export const FileTextareaContainer = styled.div`
   width: 70%;
 
-  @media screen and ${(props) => props.theme.mimir.queries.phoneAndBelow} {
+  @media screen and ${(props) => props.theme.mimirorg.queries.phoneAndBelow} {
     width: 100%;
   }
 `;
@@ -70,10 +70,10 @@ export const FileTextContainer = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 150px;
-  margin-left: ${(props) => props.theme.mimir.spacing.l};
-  margin-right: ${(props) => props.theme.mimir.spacing.l};
+  margin-left: ${(props) => props.theme.mimirorg.spacing.l};
+  margin-right: ${(props) => props.theme.mimirorg.spacing.l};
 
-  @media screen and ${(props) => props.theme.mimir.queries.phoneAndBelow} {
+  @media screen and ${(props) => props.theme.mimirorg.queries.phoneAndBelow} {
     max-width: none;
     width: 70%;
 

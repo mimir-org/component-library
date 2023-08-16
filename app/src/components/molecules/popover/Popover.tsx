@@ -1,4 +1,5 @@
 import * as PopoverPrimitive from "@radix-ui/react-popover";
+import { AnimatePresence } from "framer-motion";
 import { PropsWithChildren, ReactNode } from "react";
 import { useTheme } from "styled-components";
 import { Text } from "../../atoms";
@@ -43,19 +44,21 @@ export const Popover = ({
   return (
     <PopoverPrimitive.Root onOpenChange={onOpenChange}>
       <PopoverPrimitive.Trigger asChild>{children}</PopoverPrimitive.Trigger>
-      <PopoverPrimitive.Portal>
-        <PopoverPrimitive.Content asChild avoidCollisions sideOffset={offset} side={placement} align={align}>
-          <PopoverContent {...theme.mimir.animation.scale} {...delegated}>
-            {containsTextOnly ? (
-              <Text variant={"body-medium"} textAlign={"center"}>
-                {content}
-              </Text>
-            ) : (
-              content
-            )}
-          </PopoverContent>
-        </PopoverPrimitive.Content>
-      </PopoverPrimitive.Portal>
+      <AnimatePresence>
+        <PopoverPrimitive.Portal>
+          <PopoverPrimitive.Content asChild avoidCollisions sideOffset={offset} side={placement} align={align}>
+            <PopoverContent {...theme.mimirorg.animation.scale} {...delegated}>
+              {containsTextOnly ? (
+                <Text variant={"body-medium"} textAlign={"center"}>
+                  {content}
+                </Text>
+              ) : (
+                content
+              )}
+            </PopoverContent>
+          </PopoverPrimitive.Content>
+        </PopoverPrimitive.Portal>
+      </AnimatePresence>
     </PopoverPrimitive.Root>
   );
 };

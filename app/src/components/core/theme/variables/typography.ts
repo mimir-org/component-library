@@ -2,7 +2,7 @@ import { math } from "polished";
 import { NominalScale, TypefaceReference, TypeScaleSpecification, TypographyRoles, TypographySystem } from "../props";
 
 const typefaceReference: TypefaceReference = {
-  brand: '"nunito Sans", sans-serif',
+  brand: "'Roboto', sans-serif",
   weights: {
     bold: 700,
     medium: 600,

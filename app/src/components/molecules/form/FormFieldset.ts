@@ -9,15 +9,15 @@ export type FormFieldsetProps = Flex;
  */
 export const FormFieldset = styled.fieldset<FormFieldsetProps>`
   display: flex;
-  gap: ${(props) => props.theme.mimir.spacing.xxl};
+  gap: ${(props) => props.theme.mimirorg.spacing.xxl};
 
-  padding: ${(props) => props.theme.mimir.spacing.xl} ${(props) => props.theme.mimir.spacing.xl}
-    ${(props) => props.theme.mimir.spacing.multiple(6)};
+  padding: ${(props) => props.theme.mimirorg.spacing.xl} ${(props) => props.theme.mimirorg.spacing.xl}
+    ${(props) => props.theme.mimirorg.spacing.multiple(6)};
 
   border: 0;
-  border-radius: ${(props) => props.theme.mimir.border.radius.medium};
-  box-shadow: ${(props) => props.theme.mimir.shadow.medium};
-  background-color: ${(props) => props.theme.mimir.color.text.on};
+  border-radius: ${(props) => props.theme.mimirorg.border.radius.medium};
+  box-shadow: ${(props) => props.theme.mimirorg.shadow.medium};
+  background-color: ${(props) => props.theme.mimirorg.color.text.on};
 
   ${flexMixin};
 `;

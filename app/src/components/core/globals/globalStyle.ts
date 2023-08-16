@@ -6,15 +6,15 @@ export const GlobalStyle = createGlobalStyle`
   ${globalResetStyle};
 
   body {
-    background: ${({ theme }) => theme.mimir.color.background.base};
+    background: ${({ theme }) => theme.mimirorg.color.background.base};
   }
 
   // Global typography styles
   body {
-    font-family: ${({ theme }) => theme.mimir.typography.typeface.brand};
-    font-weight: ${({ theme }) => theme.mimir.typography.typeface.weights.normal};
+    font-family: ${({ theme }) => theme.mimirorg.typography.typeface.brand};
+    font-weight: ${({ theme }) => theme.mimirorg.typography.typeface.weights.normal};
     font-size: 100%;
-    color: ${({ theme }) => theme.mimir.color.text.base};
+    color: ${({ theme }) => theme.mimirorg.color.text.base};
   }
 
   h1 {
@@ -54,7 +54,7 @@ export const GlobalStyle = createGlobalStyle`
   b,
   strong {
     ${getTextRole("body-large")};
-    font-weight: ${({ theme }) => theme.mimir.typography.typeface.weights.bold};
+    font-weight: ${({ theme }) => theme.mimirorg.typography.typeface.weights.bold};
   }
 
   small {

@@ -30,10 +30,10 @@ export const ErrorMessage = ({ title, subtitle, status, linkText, linkPath }: No
       alignItems={"center"}
       width={"100%"}
       height={"100%"}
-      spacing={{ p: theme.mimir.spacing.xxxl }}
+      spacing={{ p: theme.mimirorg.spacing.xxxl }}
     >
-      <Box display={"flex"} flexDirection={"column"} gap={theme.mimir.spacing.xxxl} maxWidth={"60ch"}>
-        <Heading variant={"display-large"} fontWeight={theme.mimir.typography.typeface.weights.bold}>
+      <Box display={"flex"} flexDirection={"column"} gap={theme.mimirorg.spacing.xxxl} maxWidth={"60ch"}>
+        <Heading variant={"display-large"} fontWeight={theme.mimirorg.typography.typeface.weights.bold}>
           {title}
         </Heading>
         <Heading as={"h2"} variant={"display-medium"}>
@@ -47,7 +47,7 @@ export const ErrorMessage = ({ title, subtitle, status, linkText, linkPath }: No
             variant={"text"}
             textVariant={"label-large"}
             spacing={{
-              p: theme.mimir.spacing.s,
+              p: theme.mimirorg.spacing.s,
             }}
           >
             {linkText}

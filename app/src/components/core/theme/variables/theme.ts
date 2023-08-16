@@ -3,6 +3,8 @@ import { animation } from "./animation";
 import { border } from "./border";
 import { dark } from "./color/dark";
 import { light } from "./color/light";
+import { tyleDark } from "./color/tyleDark";
+import { tyleLight } from "./color/tyleLight";
 import { elevation } from "./elevation";
 import { query } from "./query";
 import { shadow } from "./shadow";
@@ -23,7 +25,18 @@ export const theme: Theme = {
 };
 
 export const themeBuilder = (colorTheme: string): Theme => {
-  const targetTheme = colorTheme === "dark" ? dark : light;
+  let targetTheme = light;
+  switch (colorTheme) {
+    case "dark":
+      targetTheme = dark;
+      break;
+    case "tyleLight":
+      targetTheme = tyleLight;
+      break;
+    case "tyleDark":
+      targetTheme = tyleDark;
+      break;
+  }
 
   return {
     ...theme,

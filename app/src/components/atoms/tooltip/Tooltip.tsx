@@ -48,7 +48,7 @@ export const Tooltip = forwardRef((props: PropsWithChildren<Props>, ref: Forward
               side={placement}
               align={align}
             >
-              <MotionTooltipContent {...theme.mimir.animation.scale} {...delegated}>
+              <MotionTooltipContent {...theme.mimirorg.animation.scale} {...delegated}>
                 {containsTextOnly ? <Text variant={"body-medium"}>{content}</Text> : content}
               </MotionTooltipContent>
             </TooltipPrimitive.Content>

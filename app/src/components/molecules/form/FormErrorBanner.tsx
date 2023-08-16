@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import { useTheme } from "styled-components";
+import { mimirColorReference } from "../../core/theme/variables/color/reference/mimirColorReference";
 import { Box } from "../../layouts";
 
 interface FormErrorBannerProps {
@@ -14,10 +15,18 @@ export const FormErrorBanner = ({ children }: FormErrorBannerProps) => {
 
   return (
     <Box
-      {...theme.mimir.animation.fade}
-      spacing={{ p: theme.mimir.spacing.l }}
-      bgColor={theme.mimir.color.error.on}
-      color={theme.mimir.color.error.base}
+      {...theme.mimirorg.animation.fade}
+      spacing={{ p: theme.mimirorg.spacing.l }}
+      bgColor={
+        theme.mimirorg.color.reference === mimirColorReference
+          ? theme.mimirorg.color.error.on
+          : theme.mimirorg.color.error.base
+      }
+      color={
+        theme.mimirorg.color.reference === mimirColorReference
+          ? theme.mimirorg.color.error.base
+          : theme.mimirorg.color.error.on
+      }
     >
       {children}
     </Box>

@@ -3,27 +3,34 @@ import { CheckBox, CheckBoxOutlineBlank } from "@styled-icons/material-rounded";
 import { motion } from "framer-motion";
 import styled from "styled-components";
 import { focus } from "../../../core/theme/helpers";
+import { mimirColorReference } from "../../../core/theme/variables/color/reference/mimirColorReference";
 
 export const CheckboxRoot = styled(CheckboxPrimitive.Root)`
   all: unset;
   position: relative;
-  border-radius: ${(props) => props.theme.mimir.border.radius.small};
-  color: ${(props) => props.theme.mimir.color.primary.base};
+  border-radius: ${(props) => props.theme.mimirorg.border.radius.small};
+  color: ${(props) => props.theme.mimirorg.color.primary.base};
   height: 24px;
   width: 24px;
 
   :disabled {
-    color: ${(props) => props.theme.mimir.color.outline.base};
+    color: ${(props) =>
+      props.theme.mimirorg.color.reference === mimirColorReference
+        ? props.theme.mimirorg.color.outline.base
+        : props.theme.mimirorg.color.surface.variant.on};
     cursor: not-allowed;
   }
 
   :not(:disabled) {
     :hover {
-      background-color: ${(props) => props.theme.mimir.color.secondary.container?.base};
+      background-color: ${(props) =>
+        props.theme.mimirorg.color.reference === mimirColorReference
+          ? props.theme.mimirorg.color.secondary.container?.base
+          : props.theme.mimirorg.color.secondary.base};
     }
 
     :active {
-      color: ${(props) => props.theme.mimir.color.surface.on};
+      color: ${(props) => props.theme.mimirorg.color.surface.on};
     }
   }
 

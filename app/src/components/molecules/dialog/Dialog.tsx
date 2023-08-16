@@ -63,11 +63,11 @@ export const Dialog = forwardRef<HTMLButtonElement, DialogProps>(
 
         <DialogPrimitive.Portal>
           <DialogPrimitive.Overlay asChild>
-            <DialogOverlay {...theme.mimir.animation.fade} />
+            <DialogOverlay {...theme.mimirorg.animation.fade} />
           </DialogPrimitive.Overlay>
           <DialogPrimitive.Content asChild>
-            <DialogContent {...theme.mimir.animation.fade} {...delegated}>
-              <Box display={"flex"} flexDirection={"column"} gap={theme.mimir.spacing.xl} maxWidth={"50ch"}>
+            <DialogContent {...theme.mimirorg.animation.fade} {...delegated}>
+              <Box display={"flex"} flexDirection={"column"} gap={theme.mimirorg.spacing.xl} maxWidth={"50ch"}>
                 <DialogTitle hide={hideTitle}>{title}</DialogTitle>
                 {description && <DialogDescription hide={hideDescription}>{description}</DialogDescription>}
               </Box>

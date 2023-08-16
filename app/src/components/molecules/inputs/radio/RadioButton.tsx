@@ -48,7 +48,12 @@ export const RadioButton = ({ options, direction, onRadioChange, ...rest }: Radi
                   <RadioGroupItem checked={item.checked} value={item.value} id={item.value}>
                     <RadioGroupIndicator />
                   </RadioGroupItem>
-                  <Text htmlFor={item.value} as="label" variant="label-medium" spacing={{ ml: theme.mimir.spacing.l }}>
+                  <Text
+                    htmlFor={item.value}
+                    as="label"
+                    variant="label-medium"
+                    spacing={{ ml: theme.mimirorg.spacing.l }}
+                  >
                     {item.label}
                   </Text>
                 </Flexbox>

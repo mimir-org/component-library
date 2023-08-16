@@ -1,7 +1,7 @@
-import "@fontsource/nunito-sans/300.css";
-import "@fontsource/nunito-sans/400.css";
-import "@fontsource/nunito-sans/600.css";
-import "@fontsource/nunito-sans/700.css";
+import "@fontsource/roboto/300.css";
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/700.css";
 import { TooltipProvider } from "@radix-ui/react-tooltip";
 import { MotionConfig } from "framer-motion";
 import { PropsWithChildren } from "react";
@@ -12,7 +12,7 @@ import { usePrefersTheme } from "../hooks/usePrefersTheme";
 import { themeBuilder } from "./variables/theme";
 
 export interface MimirorgThemeProviderProps {
-  theme?: "light" | "dark";
+  theme?: "light" | "dark" | "tyleLight" | "tyleDark";
 }
 
 /**
@@ -27,7 +27,7 @@ export const MimirorgThemeProvider = ({ theme = "light", children }: PropsWithCh
   const [colorTheme] = usePrefersTheme(theme);
 
   const applicationTheme = {
-    mimir: themeBuilder(colorTheme),
+    mimirorg: themeBuilder(colorTheme),
   };
 
   return (

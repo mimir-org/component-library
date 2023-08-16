@@ -51,7 +51,7 @@ export const InspectorTabHeader = styled.div<InspectorTabHeaderProps>`
   margin-right: 7px;
   height: ${(props) => (props.active ? 44 : 35)}px;
   margin-top: ${(props) => (props.active ? 0 : 9)}px;
-  background-color: ${(props) => (props.active ? props.theme.mimir.color.reference.neutral[99] : props.color)};
+  background-color: ${(props) => (props.active ? props.theme.mimirorg.color.reference.neutral[99] : props.color)};
   padding: ${(props) => (props.active ? "17px 14px 0px 14px;" : "8px 14px 0px 14px")};
   box-shadow: -4px 0 4px -5px rgba(0, 0, 0, 0.4), 4px 0 3px -5px rgba(0, 0, 0, 0.4);
 
@@ -60,7 +60,7 @@ export const InspectorTabHeader = styled.div<InspectorTabHeaderProps>`
   }
   p {
     bottom: ${(props: { active: boolean }) => (props.active ? 20 : 16)}px;
-    font-weight: ${(props) => props.active && props.theme.mimir.typography.typeface.weights.bold};
+    font-weight: ${(props) => props.active && props.theme.mimirorg.typography.typeface.weights.bold};
     text-align: center;
   }
 `;
