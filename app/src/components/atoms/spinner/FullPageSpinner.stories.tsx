@@ -4,16 +4,17 @@ import { FullPageSpinner } from "./FullPageSpinner";
 const meta: Meta<typeof FullPageSpinner> = {
   title: "Atoms/FullPageSpinner",
   component: FullPageSpinner,
+  args: {},
 };
 
 type Story = StoryObj<typeof FullPageSpinner>;
 
-export const Default: Story = {
-  render: () => <FullPageSpinner />,
-};
+export const Default: Story = {};
 
 export const WithText: Story = {
-  render: () => <FullPageSpinner text={"Loading state"} />,
+  args: {
+    text: "Loading state",
+  },
 };
 
 export default meta;

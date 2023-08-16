@@ -4,16 +4,20 @@ import { TokenCheckbox } from "./TokenCheckbox";
 const meta: Meta<typeof TokenCheckbox> = {
   title: "Atoms/Tokens/TokenCheckbox",
   component: TokenCheckbox,
+  args: {
+    children: "Token",
+    checked: false,
+  },
 };
 
 type Story = StoryObj<typeof TokenCheckbox>;
 
-export const Default: Story = {
-  render: () => <TokenCheckbox>Token</TokenCheckbox>,
-};
+export const Default: Story = {};
 
 export const Checked: Story = {
-  render: () => <TokenCheckbox checked={true}>Token</TokenCheckbox>,
+  args: {
+    checked: true,
+  },
 };
 
 export default meta;

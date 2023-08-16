@@ -6,6 +6,9 @@ import { Card } from "./Card";
 const meta: Meta<typeof Card> = {
   title: "Atoms/Card",
   component: Card,
+  args: {
+    variant: "filled",
+  },
 };
 
 type Story = StoryObj<typeof Card>;
@@ -21,9 +24,9 @@ const Content = () => (
 );
 
 export const Filled: Story = {
-  render: () => (
+  render: (args) => (
     <Box width={"250px"}>
-      <Card>
+      <Card {...args}>
         <Content />
       </Card>
     </Box>
@@ -31,13 +34,16 @@ export const Filled: Story = {
 };
 
 export const Selected: Story = {
-  render: () => (
+  render: (args) => (
     <Box width={"250px"}>
-      <Card variant={"selected"}>
+      <Card {...args}>
         <Content />
       </Card>
     </Box>
   ),
+  args: {
+    variant: "selected",
+  },
 };
 
 export default meta;

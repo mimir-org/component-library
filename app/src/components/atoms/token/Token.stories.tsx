@@ -5,29 +5,31 @@ import { Token } from "./Token";
 const meta: Meta<typeof Token> = {
   title: "Atoms/Tokens/Token",
   component: Token,
+  args: {
+    children: "Primary token (default)",
+    variant: "primary",
+  },
 };
 
 type Story = StoryObj<typeof Token>;
 
-export const Primary: Story = {
-  render: () => <Token variant={"primary"}>Primary token (default)</Token>,
-};
+export const Primary: Story = {};
 
 export const Secondary: Story = {
-  render: () => <Token variant={"secondary"}>Secondary token</Token>,
+  args: {
+    children: "Secondary token",
+    variant: "secondary",
+  },
 };
 
 export const Actionable: Story = {
-  render: () => (
-    <Token
-      actionable={true}
-      actionIcon={LibraryIcon}
-      actionText={"Trigger action"}
-      onAction={() => alert("[STORYBOOK] Token.onAction")}
-    >
-      Actionable token
-    </Token>
-  ),
+  args: {
+    children: "Actionable token",
+    actionable: true,
+    actionIcon: LibraryIcon,
+    actionText: "Trigger action",
+    onAction: () => alert("[STORYBOOK] Token.onAction"),
+  },
 };
 
 export default meta;
