@@ -1,7 +1,7 @@
-import "@fontsource/nunito-sans/300.css";
-import "@fontsource/nunito-sans/400.css";
-import "@fontsource/nunito-sans/600.css";
-import "@fontsource/nunito-sans/700.css";
+import "@fontsource/roboto/300.css";
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/700.css";
 import { TooltipProvider } from "@radix-ui/react-tooltip";
 import { MotionConfig } from "framer-motion";
 import { PropsWithChildren } from "react";
