@@ -23,6 +23,7 @@ export { DialogTitle } from "./dialog/components/DialogTitle";
 export { FileComponent } from "./file/FileComponent";
 
 export { Form } from "./form/Form";
+export { FormBaseFieldsContainer, FormContainer } from "./form/FormContainer.styled";
 export { FormErrorBanner } from "./form/FormErrorBanner";
 export { FormField } from "./form/FormField";
 export { FormFieldset } from "./form/FormFieldset";
