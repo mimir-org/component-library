@@ -1,7 +1,7 @@
 import { RadioGroupItem, RadioGroupItemProps } from "@radix-ui/react-radio-group";
 import { ForwardedRef, forwardRef } from "react";
 import { useTheme } from "styled-components";
-import { Text } from "../../";
+import { Text } from "../../../atoms";
 import { MotionTokenContainer } from "../Token.styled";
 
 export type TokenRadioGroupItemProps = Omit<RadioGroupItemProps, "asChild">;

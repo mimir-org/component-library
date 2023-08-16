@@ -1,5 +1,5 @@
 import { useTheme } from "styled-components";
-import { Heading } from "../";
+import { Heading } from "../../atoms";
 import { FullPageSpinnerContainer } from "./FullPageSpinner.styled";
 import { Spinner } from "./Spinner";
 

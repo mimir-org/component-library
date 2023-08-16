@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Button, Heading, Text } from "../";
+import { Button, Heading, Text } from "../../atoms";
 import { Box, Flexbox } from "../../layouts";
 import { Card } from "./Card";
 

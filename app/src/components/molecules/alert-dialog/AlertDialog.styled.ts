@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import styled from "styled-components/macro";
+import styled from "styled-components";
 import { Flex, Sizing } from "../../core/props";
 import { flexMixin, sizingMixin, translucify } from "../../core/theme/helpers";
 import { MotionBox } from "../../layouts";

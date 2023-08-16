@@ -1,5 +1,5 @@
 import { ForwardedRef, HTMLAttributes, ReactNode, forwardRef } from "react";
-import { Button, Text } from "../";
+import { Button, Text } from "../../atoms";
 import { Actionable } from "../../core/types";
 import { TokenContainer } from "./Token.styled";
 

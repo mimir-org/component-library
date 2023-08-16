@@ -1,7 +1,7 @@
 import { CheckboxProps, Root as CheckboxRoot } from "@radix-ui/react-checkbox";
 import { ForwardedRef, forwardRef } from "react";
 import { useTheme } from "styled-components";
-import { Text } from "../../";
+import { Text } from "../../../atoms";
 import { MotionTokenContainer } from "../Token.styled";
 
 export type TokenCheckboxProps = Omit<CheckboxProps, "asChild">;
