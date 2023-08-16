@@ -1,3 +1,5 @@
+export type { IconProps } from "./media/Icon";
+
 export { Button } from "./buttons/Button";
 export { Card, MotionCard } from "./card/Card";
 export { ConditionalWrapper } from "./conditional/ConditionalWrapper";

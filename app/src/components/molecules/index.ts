@@ -2,6 +2,7 @@ export type { AlertDialogActionItem } from "./alert-dialog/components/AlertDialo
 export type { AlertDialogCancelItem } from "./alert-dialog/components/AlertDialogCancel";
 export type { FileInfo } from "./file/types/fileInfo";
 export type { CalendarVariant } from "./inputs/calendar/CalendarComponent.styled";
+export type { InputProps } from "./inputs/input/Input";
 export type { SelectVariant } from "./inputs/select/Select";
 
 export { Accordion } from "./accordion/Accordion";
@@ -21,6 +22,7 @@ export { DialogExit } from "./dialog/components/DialogExit";
 export { DialogTitle } from "./dialog/components/DialogTitle";
 
 export { FileComponent } from "./file/FileComponent";
+export { FileItemComponent } from "./file/components/FileItemComponent";
 
 export { Form } from "./form/Form";
 export { FormBaseFieldsContainer, FormContainer } from "./form/FormContainer.styled";
@@ -33,6 +35,7 @@ export { FormLegend } from "./form/FormLegend";
 export { CalendarComponent } from "./inputs/calendar/CalendarComponent";
 export { Checkbox } from "./inputs/checkbox/Checkbox";
 export { Counter } from "./inputs/counter/Counter";
+export { Digits } from "./inputs/digits/Digits";
 export { Input } from "./inputs/input/Input";
 export { RadioButton } from "./inputs/radio/RadioButton";
 export { RichTextarea } from "./inputs/rich-textarea/RichTextarea";
