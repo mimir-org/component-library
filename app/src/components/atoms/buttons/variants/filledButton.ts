@@ -22,7 +22,7 @@ export const filledButton = (color: ColorSystem, dangerousAction?: boolean, butt
       : color.primary.on};
 
     :disabled {
-      background-color: ${dangerousAction ? color.dangerousAction.on : color.outline.base};
+      background-color: ${color.outline.base};
       color: ${color.surface.variant.on};
     }
 
