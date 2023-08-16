@@ -1,4 +1,5 @@
 export { Button } from "./buttons/Button";
+export { Card, MotionCard } from "./card/Card";
 export { ConditionalWrapper } from "./conditional/ConditionalWrapper";
 export { Divider } from "./divider/Divider";
 export { FlowConnectorComponent } from "./flow/connectors/FlowConnectorComponent";

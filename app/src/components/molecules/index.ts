@@ -4,6 +4,11 @@ export type { FileInfo } from "./file/types/fileInfo";
 export type { CalendarVariant } from "./inputs/calendar/CalendarComponent.styled";
 export type { SelectVariant } from "./inputs/select/Select";
 
+export { Accordion } from "./accordion/Accordion";
+export { AccordionContent } from "./accordion/components/AccordionContent";
+export { AccordionItem } from "./accordion/components/AccordionItem";
+export { AccordionTrigger } from "./accordion/components/AccordionTrigger";
+
 export { AlertDialog } from "./alert-dialog/AlertDialog";
 export { AlertDialogAction } from "./alert-dialog/components/AlertDialogAction";
 export { AlertDialogCancel } from "./alert-dialog/components/AlertDialogCancel";
