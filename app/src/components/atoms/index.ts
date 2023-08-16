@@ -10,6 +10,7 @@ export { LogoBox, SymbolBox } from "./media/Symbol.styled";
 export { MotionPanel } from "./panel/MotionPanel";
 export { ResizablePanel } from "./panel/ResizablePanel";
 export { PlainLink } from "./plain-link/PlainLink";
+export { FullPageSpinner } from "./spinner/FullPageSpinner";
 export { Spinner } from "./spinner/Spinner";
 export { Heading } from "./text/Heading";
 export { MotionText, Text } from "./text/Text";
