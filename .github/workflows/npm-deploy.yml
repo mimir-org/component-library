@@ -13,6 +13,7 @@ jobs:
 
       - name: Generate npm package
         run: |
+          npm ci
           npm run build
           npm version ${{ github.event.release.tag_name }}
         working-directory: app
