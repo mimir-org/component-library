@@ -1,9 +1,9 @@
 import { ForwardedRef, forwardRef, isValidElement, ReactElement, ReactNode } from "react";
 import { useTheme } from "styled-components";
-import { TextTypes } from "./../../core/props/textVariant";
-import { VisuallyHidden } from "./../hidden/VisuallyHidden";
-import { Icon } from "./../media/Icon";
-import { Text } from "./../text/Text";
+import { TextTypes } from "../../core/props/textVariant";
+import { VisuallyHidden } from "../hidden/VisuallyHidden";
+import { Icon } from "../media/Icon";
+import { Text } from "../text/Text";
 import { ButtonContainerProps, MotionButtonContainer } from "./Button.styled";
 
 export type ButtonProps = ButtonContainerProps & {

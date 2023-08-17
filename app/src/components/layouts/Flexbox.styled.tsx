@@ -1,8 +1,8 @@
+import { motion } from "framer-motion";
 import { ElementType } from "react";
 import styled from "styled-components";
-import { Flex, Polymorphic } from "./../core/props/";
+import { Flex, Polymorphic } from "../core/props/";
 import { flexMixin, focus } from "../core/theme/helpers";
-import { motion } from "framer-motion";
 
 export type FlexBoxProps = Flex & Polymorphic<ElementType>;
 

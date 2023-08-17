@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 import { ButtonHTMLAttributes, ElementType } from "react";
 import styled, { css } from "styled-components";
+import { Flex, Polymorphic, Sizing, Spacings } from "../../core/props";
 import { flexMixin, focus, sizingMixin, spacingMixin } from "../../core/theme/helpers";
 import { filledButton } from "../buttons/variants/filledButton";
 import { outlinedButton } from "../buttons/variants/outlinedButton";
 import { roundButton } from "../buttons/variants/roundButton";
 import { textButton } from "../buttons/variants/textButton";
-import { Flex, Polymorphic, Sizing, Spacings } from "./../../core/props";
 import { getButtonColor } from "./Button.helpers";
 
 export type ButtonColor = "primary" | "success" | "warning" | "danger" | "error";

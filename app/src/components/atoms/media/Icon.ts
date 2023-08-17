@@ -1,6 +1,6 @@
 import { ImgHTMLAttributes } from "react";
 import styled from "styled-components";
-import { Sizing } from "./../../core/props";
+import { Sizing } from "../../core/props";
 import { sizingMixin } from "../../core/theme/helpers";
 
 export type IconProps = ImgHTMLAttributes<HTMLImageElement> &

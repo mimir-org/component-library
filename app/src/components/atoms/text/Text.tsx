@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ElementType } from "react";
 import styled from "styled-components";
+import { Display, Ellipsis, Palette, Polymorphic, Sizing, Spacings, TextVariant, Typography } from "../../core/props";
 import {
   displayMixin,
   ellipsisMixin,
@@ -10,7 +11,6 @@ import {
   spacingMixin,
   typographyMixin,
 } from "../../core/theme/helpers";
-import { Display, Ellipsis, Palette, Polymorphic, Sizing, Spacings, TextVariant, Typography } from "./../../core/props";
 
 export type TextProps = Spacings &
   Sizing &
