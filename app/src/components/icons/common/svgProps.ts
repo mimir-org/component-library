@@ -1,7 +1,8 @@
 import { SVGProps } from "react";
 import { Sizing } from "../../core/props";
 
-export type SvgProps = SVGProps<SVGSVGElement> &
-  Sizing & {
-    size?: number;
-  };
+export interface SvgProps extends Omit<SVGProps<SVGSVGElement>, "height" | "width">, Sizing, SvgPartial {}
+
+interface SvgPartial {
+  size?: number;
+}

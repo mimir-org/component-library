@@ -9,19 +9,21 @@ import { roundButton } from "../buttons/variants/roundButton";
 import { textButton } from "../buttons/variants/textButton";
 import { getButtonColor } from "./Button.helpers";
 
-export type ButtonColor = "primary" | "success" | "warning" | "danger" | "error";
+export interface ButtonContainerProps
+  extends Flex,
+    Sizing,
+    Spacings,
+    Polymorphic<ElementType>,
+    ButtonHTMLAttributes<HTMLButtonElement>,
+    ButtonContainerPropsPartial {}
 
-export type ButtonContainerProps = Flex &
-  Sizing &
-  Spacings &
-  Polymorphic<ElementType> &
-  ButtonHTMLAttributes<HTMLButtonElement> & {
-    variant?: "filled" | "outlined" | "text" | "round";
-    iconPlacement?: "left" | "right";
-    iconOnly?: boolean;
-    dangerousAction?: boolean;
-    buttonColor?: ButtonColor;
-  };
+interface ButtonContainerPropsPartial {
+  variant?: "filled" | "outlined" | "text" | "round";
+  iconPlacement?: "left" | "right";
+  iconOnly?: boolean;
+  dangerousAction?: boolean;
+  buttonColor?: "primary" | "success" | "warning" | "danger" | "error";
+}
 
 export const ButtonContainer = styled.button<ButtonContainerProps>`
   display: inline-flex;
