@@ -1,7 +1,6 @@
 import { Theme } from "../../core/theme/props";
-import { ButtonColor } from "./Button.styled";
 
-export const getButtonColor = (theme?: Theme, buttonColor?: ButtonColor) => {
+export const getButtonColor = (theme?: Theme, buttonColor?: "primary" | "success" | "warning" | "danger" | "error") => {
   switch (buttonColor) {
     case "primary":
       return theme?.color.primary.base;

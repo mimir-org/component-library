@@ -2,10 +2,11 @@ import * as TooltipPrimitive from "@radix-ui/react-tooltip";
 import { AnimatePresence } from "framer-motion";
 import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode } from "react";
 import { useTheme } from "styled-components";
+import { Sizing } from "../../core/props";
 import { Text } from "../text/Text";
-import { MotionTooltipContent, TooltipContentProps } from "./Tooltip.styled";
+import { MotionTooltipContent } from "./Tooltip.styled";
 
-type Props = TooltipContentProps & {
+export type Props = Sizing & {
   content: ReactNode;
   placement?: "top" | "right" | "bottom" | "left";
   align?: "start" | "center" | "end";

@@ -5,7 +5,7 @@ import { flexMixin, sizingMixin, translucify } from "../../core/theme/helpers";
 import { mimirColorReference } from "../../core/theme/variables/color/reference/mimirColorReference";
 import { Box } from "../../layouts";
 
-export type DialogContentProps = Sizing & Flex;
+export interface DialogContentProps extends Sizing, Flex {}
 
 export const DialogContent = styled(Box)<DialogContentProps>`
   position: fixed;
