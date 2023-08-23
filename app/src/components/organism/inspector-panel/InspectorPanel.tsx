@@ -12,6 +12,11 @@ import {
   InspectorTabHeader,
 } from "./InspectorPanel.styled.";
 
+interface InspectorPanelTab {
+  name: string;
+  content: ReactNode;
+}
+
 type Props = Spacings &
   InspectorHeaderProps & {
     duration: number;
@@ -20,22 +25,16 @@ type Props = Spacings &
     isLocked: boolean;
     onLock?: () => void;
     onDelete?: () => void;
-    onTabChange?: (value: "admin" | "attribute" | "terminal" | "relation") => void;
+    onTabChange?: (value: "admin" | "attribute" | "terminal") => void;
     icon?: string;
     name?: string;
     tabColor?: string;
-    selectedTab?: "admin" | "attribute" | "terminal" | "relation";
+    selectedTab?: "admin" | "attribute" | "terminal";
+    tabs: InspectorPanelTab[];
   };
 
 /**
  * Simple error message component offering navigation via link/button
- *
- * @param title
- * @param subtitle
- * @param status
- * @param linkText
- * @param linkPath
- * @constructor
  */
 export const InspectorPanel = (props: Props) => {
   const {
@@ -56,9 +55,7 @@ export const InspectorPanel = (props: Props) => {
   const theme = useMimirorgTheme();
   const [expanded, setExpanded] = useState<boolean>(isOpen);
   const [lock, setLock] = useState<boolean>(isLocked);
-  const [activeTab, setActiveTab] = useState<"admin" | "attribute" | "terminal" | "relation">(
-    selectedTab != null ? selectedTab : "admin"
-  );
+  const [activeTab, setActiveTab] = useState<"admin" | "attribute" | "terminal">(selectedTab ?? "admin");
 
   useEffect(() => {
     setExpanded(isOpen);
@@ -111,18 +108,6 @@ export const InspectorPanel = (props: Props) => {
               >
                 <Text useEllipsis={true} ellipsisMaxLines={1} as="p">
                   Terminal Attributes
-                </Text>
-              </InspectorTabHeader>
-              <InspectorTabHeader
-                color={tabColor != null ? tabColor : ""}
-                active={activeTab === "relation"}
-                onClick={() => {
-                  setActiveTab("relation");
-                  onTabChange && onTabChange("relation");
-                }}
-              >
-                <Text useEllipsis={true} ellipsisMaxLines={1} as="p">
-                  Relations
                 </Text>
               </InspectorTabHeader>
 

@@ -1,5 +1,5 @@
 import { ForwardedRef, forwardRef, InputHTMLAttributes, isValidElement, ReactElement } from "react";
-import { Icon } from "../../../atoms/media/Icon";
+import { Icon } from "../../../atoms";
 import { Sizing } from "../../../core/props";
 import { Box } from "../../../layouts";
 import { InputContainer, InputIconContainer } from "./Input.styled";
