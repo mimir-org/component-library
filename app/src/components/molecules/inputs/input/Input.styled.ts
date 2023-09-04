@@ -44,3 +44,17 @@ export const InputIconContainer = styled.span<InputProps>`
     height: 24px;
   }
 `;
+
+export const IconContainer = styled.div`
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+`;
+
+export const StyledInput = styled.input`
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding-right: 30px;
+`;
