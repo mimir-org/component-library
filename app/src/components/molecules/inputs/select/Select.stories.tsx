@@ -12,6 +12,14 @@ const mockData = [
   { label: "Item E", value: "Value E" },
 ];
 
+const mockDataWithDisabledValues = [
+  { label: "Item A", value: "Value A", isDisabled: true },
+  { label: "Item B", value: "Value B" },
+  { label: "Item C", value: "Value C", isDisabled: true },
+  { label: "Item D", value: "Value D" },
+  { label: "Item E", value: "Value E" },
+];
+
 const meta: Meta<typeof Select> = {
   title: "Molecules/Select",
   component: Select,
@@ -24,6 +32,29 @@ export const Default: Story = {
     options: mockData,
     variant: "standard",
   },
+};
+
+export const MultiSelect: Story = {
+  render: () => (
+    <Select
+      options={mockDataWithDisabledValues}
+      isMulti
+      getOptionLabel={(x) => x.label}
+      getOptionValue={(x) => x.value}
+    />
+  ),
+};
+
+export const MultiSelectHideDisabledOptions: Story = {
+  render: () => (
+    <Select
+      options={mockDataWithDisabledValues}
+      isMulti
+      variant={"hideDisabledOptions"}
+      getOptionLabel={(x) => x.label}
+      getOptionValue={(x) => x.value}
+    />
+  ),
 };
 
 export const Compact: Story = {

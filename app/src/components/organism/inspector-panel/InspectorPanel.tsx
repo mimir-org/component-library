@@ -12,11 +12,6 @@ import {
   InspectorTabHeader,
 } from "./InspectorPanel.styled.";
 
-interface InspectorPanelTab {
-  name: string;
-  content: ReactNode;
-}
-
 type Props = Spacings &
   InspectorHeaderProps & {
     duration: number;
@@ -30,7 +25,6 @@ type Props = Spacings &
     name?: string;
     tabColor?: string;
     selectedTab?: "admin" | "attribute" | "terminal";
-    tabs: InspectorPanelTab[];
   };
 
 /**

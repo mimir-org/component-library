@@ -1,5 +1,5 @@
-import { ColorSystem } from "../../props";
 import { mimirColorReference } from "./reference/mimirColorReference";
+import { ColorSystem } from "../../props";
 
 export const light: ColorSystem = {
   reference: mimirColorReference,

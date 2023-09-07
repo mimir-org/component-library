@@ -2,7 +2,7 @@ import { GroupBase, StylesConfig } from "react-select";
 import { Theme } from "../../../../core/theme/props";
 import { mimirColorReference } from "../../../../core/theme/variables/color/reference/mimirColorReference";
 
-export const getStandardSelectStyle = <Option, IsMulti extends boolean, Group extends GroupBase<Option>>(
+export const getHideDisabledStyle = <Option, IsMulti extends boolean, Group extends GroupBase<Option>>(
   theme: Theme
 ): StylesConfig<Option, IsMulti, Group> => ({
   container: (base, state) => ({
@@ -107,6 +107,7 @@ export const getStandardSelectStyle = <Option, IsMulti extends boolean, Group ex
       backgroundColor,
       paddingLeft: theme.spacing.l,
       color: theme.color.background.on,
+      display: state.isDisabled ? "none" : "block",
     };
   },
 });

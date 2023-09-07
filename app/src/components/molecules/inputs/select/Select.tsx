@@ -1,12 +1,13 @@
 import { Ref } from "react";
 import ReactSelect, { GroupBase, Props, StylesConfig } from "react-select";
 import { default as ReactSelectType } from "react-select/base";
-import { useTheme } from "styled-components";
 import { Theme } from "../../../core/theme/props";
 import { getCompactSelectStyle } from "./variants/compactSelect";
 import { getStandardSelectStyle } from "./variants/standardSelect";
+import { useTheme } from "styled-components";
+import { getHideDisabledStyle } from "./variants/hideDisabled";
 
-export type SelectVariant = "standard" | "compact";
+export type SelectVariant = "standard" | "compact" | "hideDisabledOptions";
 
 interface SelectProps<Option, IsMulti extends boolean = false, Group extends GroupBase<Option> = GroupBase<Option>>
   extends Props<Option, IsMulti, Group> {
@@ -51,6 +52,8 @@ const getSelectStyle = <Option, IsMulti extends boolean, Group extends GroupBase
     case "compact": {
       return getCompactSelectStyle(theme);
     }
+    case "hideDisabledOptions":
+      return getHideDisabledStyle(theme);
     default:
       return getStandardSelectStyle(theme);
   }
