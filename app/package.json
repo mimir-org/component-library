@@ -157,7 +157,7 @@
     "react-select": "^5.7.7",
     "react-spinners": ">=0.13.8",
     "react-use-measure": ">=2.1.1",
-    "reactflow": "^11.9.4",
+    "reactflow": "^11.10.1",
     "styled-components": ">=5.3.10"
   }
 }
