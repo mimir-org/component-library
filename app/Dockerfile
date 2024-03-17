@@ -12,7 +12,7 @@ FROM base AS build
 RUN npm run build-storybook
 
 # Server static storybook via nginx
-FROM nginx:stable-alpine AS final
+FROM nginx:1.24-alpine3.17 AS final
 COPY --from=build /app/storybook-static /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY start.sh .
